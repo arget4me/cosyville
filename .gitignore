@@ -14,8 +14,3 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
-
-
-# Assets are synced elsewhere
-/art/
-/sound/
