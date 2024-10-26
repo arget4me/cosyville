@@ -5,4 +5,4 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if damage_area_active:
 		if body is VillagerClass:
-			body.queue_free()
+			body.kill_villager()

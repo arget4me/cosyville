@@ -6,6 +6,8 @@ var destination: Vector2
 var goto_pos: Vector2 = Vector2(-1,-1)
 var is_on_dest = false
 
+signal death
+
 func _ready() -> void:
 	InputMap.load_from_project_settings()
 
@@ -40,3 +42,7 @@ func _physics_process(delta):
 	action_do_move(goto_pos)
 	print(velocity)
 	move_and_slide()
+	
+func kill_villager():
+	death.emit()
+	queue_free()
