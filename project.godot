@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://Scripts/Singletons/game_manager.gd"
+SoundManager="*res://Scripts/Singletons/sound_manager.gd"
 ClickingManager="*res://Scripts/Singletons/clicking_manager.gd"
 MouseImageManager="*res://Scripts/Singletons/mouse_image_manager.gd"
 

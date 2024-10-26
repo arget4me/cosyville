@@ -29,5 +29,5 @@ func stop_theme_song():
 	audio_stream.stop()
 	
 func play_sfx(name: String):
-	print('play_sfx("%s") not yet implemented!')
+	print('play_sfx("%s") not yet implemented!' % name)
 	pass
