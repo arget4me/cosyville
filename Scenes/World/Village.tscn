@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceul5mf4uny0d"]
+
+[ext_resource type="PackedScene" uid="uid://biwreh4pxnlfm" path="res://Scenes/cosy_village_clicking_example.tscn" id="1_nj506"]
+
+[node name="Village" type="Node2D"]
+
+[node name="CosyVillage" parent="." instance=ExtResource("1_nj506")]
