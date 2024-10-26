@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://gqq7aoxosrop"]
+
+[ext_resource type="Texture2D" uid="uid://b113uyhituiii" path="res://art/fire/fire_02.PNG" id="1_jxmgu"]
+[ext_resource type="Script" path="res://art/fire/fire_anim.gd" id="1_nmmb7"]
+[ext_resource type="Texture2D" uid="uid://dauch7d88vadt" path="res://art/fire/fire_01.PNG" id="2_yumfv"]
+
+[sub_resource type="Animation" id="Animation_t51i1"]
+resource_name = "Burn"
+length = 0.175
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire01:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_yumfv"), ExtResource("1_jxmgu")]
+}
+
+[sub_resource type="Animation" id="Animation_u5wun"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire01:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_jxmgu")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_coyx6"]
+_data = {
+"Burn": SubResource("Animation_t51i1"),
+"RESET": SubResource("Animation_u5wun")
+}
+
+[node name="Fire" type="Node2D"]
+script = ExtResource("1_nmmb7")
+
+[node name="Fire01" type="Sprite2D" parent="."]
+texture = ExtResource("1_jxmgu")
+offset = Vector2(3.325, -30.745)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_coyx6")
+}
+speed_scale = 0.305

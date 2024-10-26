@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://74idepem82pk"]
+[gd_scene load_steps=9 format=3 uid="uid://74idepem82pk"]
 
 [ext_resource type="Script" path="res://Scripts/Chaos/fire_tree.gd" id="1_yah28"]
 [ext_resource type="Texture2D" uid="uid://bourbn4gtr4lr" path="res://art/world/Props/Tree.PNG" id="2_i8xu2"]
@@ -7,10 +7,12 @@
 [ext_resource type="Script" path="res://Scripts/Chaos/chaos_triggerable.gd" id="4_iih2h"]
 [ext_resource type="Texture2D" uid="uid://cglod62rgxd8e" path="res://art/world/Props/Tree_02.PNG" id="4_o6ar8"]
 [ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="5_tyk5l"]
+[ext_resource type="PackedScene" uid="uid://gqq7aoxosrop" path="res://art/fire/fire_anim.tscn" id="8_scvhf"]
 
 [node name="FireTree" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_yah28")
+fire_color = Color(1, 0.584364, 0.594435, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3, -1.00002)
@@ -35,5 +37,37 @@ cooldown_time = 30.0
 position = Vector2(2, -31)
 scale = Vector2(4, 9.639)
 
+[node name="FireNode" type="Node2D" parent="."]
+visible = false
+
+[node name="Fire" parent="FireNode" instance=ExtResource("8_scvhf")]
+
+[node name="Fire01" parent="FireNode/Fire" index="0"]
+self_modulate = Color(1, 1, 1, 0.862745)
+position = Vector2(-9, -47)
+rotation = -0.221647
+scale = Vector2(0.54823, 0.54823)
+
+[node name="Fire2" parent="FireNode" instance=ExtResource("8_scvhf")]
+
+[node name="Fire01" parent="FireNode/Fire2" index="0"]
+self_modulate = Color(1, 1, 1, 0.870588)
+position = Vector2(14, -29)
+rotation = 0.0262352
+scale = Vector2(0.413579, 0.413579)
+
+[node name="Fire3" parent="FireNode" instance=ExtResource("8_scvhf")]
+
+[node name="Fire01" parent="FireNode/Fire3" index="0"]
+self_modulate = Color(1, 1, 1, 0.870588)
+position = Vector2(11, -76)
+rotation = 0.0262352
+scale = Vector2(0.217845, 0.217845)
+flip_h = true
+
 [connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
 [connection signal="trigger_chaos" from="ChaosTriggerable" to="." method="_on_node_trigger_chaos"]
+
+[editable path="FireNode/Fire"]
+[editable path="FireNode/Fire2"]
+[editable path="FireNode/Fire3"]
