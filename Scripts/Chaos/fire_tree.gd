@@ -7,6 +7,7 @@ extends Node2D
 
 func _ready():
 	clickable.set_process(false)
+	ActionPointsManager.register_action_point(position)
 
 func _on_node_trigger_chaos() -> void:
 	sprite.self_modulate = Color.RED
