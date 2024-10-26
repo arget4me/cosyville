@@ -21,6 +21,7 @@ GameManager="*res://Scripts/Singletons/game_manager.gd"
 SoundManager="*res://Scripts/Singletons/sound_manager.gd"
 ClickingManager="*res://Scripts/Singletons/clicking_manager.gd"
 MouseImageManager="*res://Scripts/Singletons/mouse_image_manager.gd"
+ChaosManager="*res://Scripts/Singletons/chaos_manager.gd"
 
 [display]
 
