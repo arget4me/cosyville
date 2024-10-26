@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GotoStateButton2" parent="." instance=ExtResource("1_bwqvq")]
+layout_mode = 0
 offset_right = 155.0
 text = "GOTO: GAME OVER"
 goto_state_on_click = 3
