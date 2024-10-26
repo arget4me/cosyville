@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqwcom1xx1r5h"]
+[gd_scene load_steps=5 format=3 uid="uid://c1gnafm1flod2"]
 
 [ext_resource type="Script" path="res://Scripts/VillagerMovement.gd" id="1_m4to7"]
 [ext_resource type="Texture2D" uid="uid://cgtomismlwwyu" path="res://art/People/VillagerMale.png" id="2_ereig"]
@@ -10,6 +10,7 @@ size = Vector2(72, 124)
 [node name="VillagerInstance" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 script = ExtResource("1_m4to7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
