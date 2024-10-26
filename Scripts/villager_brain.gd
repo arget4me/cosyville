@@ -28,7 +28,8 @@ func action_chop_wood():
 	is_doing_action = true
 	
 	await get_tree().create_timer(2).timeout
-			
+	
+	ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[0]])
 	curr_plan.remove_at(0)
 	is_doing_action = false
 
