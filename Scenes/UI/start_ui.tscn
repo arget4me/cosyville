@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdhaio15xpnqq"]
+
+[ext_resource type="PackedScene" uid="uid://bopgndiinr47l" path="res://Scenes/UI/goto_state_button.tscn" id="1_kiwh3"]
+
+[node name="StartUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GotoStateButton" parent="." instance=ExtResource("1_kiwh3")]
+layout_mode = 0
+text = "GOTO: PLAYING"
+goto_state_on_click = 1

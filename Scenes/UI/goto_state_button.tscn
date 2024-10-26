@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bopgndiinr47l"]
+
+[ext_resource type="Script" path="res://Scripts/UI/transition_game_state_button.gd" id="1_070ah"]
+
+[node name="GotoStateButton" type="Button"]
+offset_right = 56.0
+offset_bottom = 31.0
+text = "START"
+script = ExtResource("1_070ah")
