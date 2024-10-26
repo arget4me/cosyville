@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://702f3n8od2c0"]
+
+[ext_resource type="Texture2D" uid="uid://d06jr5jbqu0hl" path="res://art/world/Props/house_red.PNG" id="1_ilwmk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61u7c"]
+radius = 5.34
+height = 90.0038
+
+[node name="House_Red" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1, 1)
+texture = ExtResource("1_ilwmk")
+offset = Vector2(0, -43.955)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 2)
+rotation = 1.56887
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-12.9942, -3.025)
+shape = SubResource("CapsuleShape2D_61u7c")

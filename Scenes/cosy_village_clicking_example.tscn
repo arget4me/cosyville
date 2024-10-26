@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=8 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="PackedScene" uid="uid://cdevdb2f0xlsc" path="res://Scenes/World/clouds.tscn" id="2_44oqd"]
 [ext_resource type="Texture2D" uid="uid://b56ar24cwrrtb" path="res://art/world/background_.PNG" id="3_oicvn"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
+[ext_resource type="PackedScene" uid="uid://702f3n8od2c0" path="res://Scenes/World/house_red.tscn" id="7_af8d8"]
 [ext_resource type="PackedScene" uid="uid://dqwcom1xx1r5h" path="res://Scenes/villager_instance.tscn" id="7_jhwky"]
 [ext_resource type="PackedScene" uid="uid://b16bki12o36mf" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
 
@@ -147,3 +148,16 @@ position = Vector2(1201, 933)
 
 [node name="Ladan" parent="YSORT" instance=ExtResource("8_gfc0v")]
 position = Vector2(1200, 420)
+
+[node name="House_Red" parent="YSORT" instance=ExtResource("7_af8d8")]
+position = Vector2(666, 412)
+
+[node name="House_Red2" parent="YSORT" instance=ExtResource("7_af8d8")]
+position = Vector2(949, 659)
+rotation = -0.0929171
+scale = Vector2(1.08, 1.32)
+
+[node name="House_Red3" parent="YSORT" instance=ExtResource("7_af8d8")]
+position = Vector2(522, 488)
+rotation = 0.0699173
+scale = Vector2(0.949116, 1.32)
