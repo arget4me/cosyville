@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://wvo4711uwpjg"]
+
+[sub_resource type="SystemFont" id="SystemFont_g14qc"]
+font_names = PackedStringArray("Agency FB")
+font_weight = 800
+
+[resource]
+Label/colors/font_color = Color(1, 1, 0.305882, 1)
+Label/constants/outline_size = 14
+Label/font_sizes/font_size = 50
+Label/fonts/font = SubResource("SystemFont_g14qc")
