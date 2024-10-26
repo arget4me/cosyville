@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bigyrg80ted7u"
-path="res://.godot/imported/WaterBucket.png-e8edcedc725f8749f410aae4abfe4958.ctex"
+uid="uid://djqymd685tooo"
+path="res://.godot/imported/background.PNG-a677cdfcef925d20a970827903165482.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/WaterBucket.png"
-dest_files=["res://.godot/imported/WaterBucket.png-e8edcedc725f8749f410aae4abfe4958.ctex"]
+source_file="res://art/world/background.PNG"
+dest_files=["res://.godot/imported/background.PNG-a677cdfcef925d20a970827903165482.ctex"]
 
 [params]
 

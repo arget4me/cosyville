@@ -1,13 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=5 format=3 uid="uid://biwreh4pxnlfm"]
 
+[ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
+[ext_resource type="Texture2D" uid="uid://djqymd685tooo" path="res://art/world/background.PNG" id="2_n8v0u"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
 
 [node name="CosyVillage" type="Node2D"]
 
+[node name="Art" type="Node2D" parent="."]
+
+[node name="Sky" type="Sprite2D" parent="Art"]
+texture = ExtResource("1_w4iek")
+
+[node name="Background" type="Sprite2D" parent="Art"]
+texture = ExtResource("2_n8v0u")
+
 [node name="Village" type="Sprite2D" parent="."]
-position = Vector2(438, 353)
+position = Vector2(-519, -115)
+scale = Vector2(0.319999, 0.319999)
 texture = ExtResource("2_1fpkn")
 
 [node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
 scale = Vector2(2.09422, 2.11328)
+
+[node name="Camera2D" type="Camera2D" parent="."]
