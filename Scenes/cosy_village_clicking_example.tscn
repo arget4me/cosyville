@@ -1,12 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=4 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="PackedScene" uid="uid://hotmtqqtnl8k" path="res://Scenes/UI/hud.tscn" id="1_skgd2"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
-[ext_resource type="Script" path="res://Scripts/Clicking/forest.gd" id="4_pfm7f"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0k5c6"]
-size = Vector2(122, 124)
 
 [node name="CosyVillage" type="Node2D"]
 
@@ -18,17 +14,3 @@ texture = ExtResource("2_1fpkn")
 
 [node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
 scale = Vector2(2.09422, 2.11328)
-
-[node name="Forest" type="Sprite2D" parent="."]
-self_modulate = Color(3.46541e-06, 0.494325, 0.0314958, 1)
-position = Vector2(882, 209)
-texture = ExtResource("2_1fpkn")
-script = ExtResource("4_pfm7f")
-
-[node name="Area2D" type="Area2D" parent="Forest"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/Area2D"]
-shape = SubResource("RectangleShape2D_0k5c6")
-
-[connection signal="mouse_entered" from="Forest/Area2D" to="Forest" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Forest/Area2D" to="Forest" method="_on_area_2d_mouse_exited"]
