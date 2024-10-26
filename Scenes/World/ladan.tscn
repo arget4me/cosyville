@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b16bki12o36mf"]
+
+[ext_resource type="Texture2D" uid="uid://k1bomiv5xy1k" path="res://art/world/Props/ladan.PNG" id="1_toibe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61u7c"]
+radius = 5.34
+height = 197.34
+
+[node name="Ladan" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(3, -3.04999)
+texture = ExtResource("1_toibe")
+offset = Vector2(0, -53.45)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1, -2.04999)
+rotation = 1.56887
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-12.9942, -3.025)
+shape = SubResource("CapsuleShape2D_61u7c")

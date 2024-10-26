@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgtomismlwwyu" path="res://art/People/VillagerMale.png" id="2_ereig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0q22o"]
-size = Vector2(92, 156)
+size = Vector2(72, 124)
 
 [node name="VillagerInstance" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -19,6 +19,6 @@ texture = ExtResource("2_ereig")
 offset = Vector2(0, -61.045)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.519958, -34.52)
+position = Vector2(0, -29)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0q22o")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=9 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
 [ext_resource type="PackedScene" uid="uid://dqwcom1xx1r5h" path="res://Scenes/villager_instance.tscn" id="7_jhwky"]
+[ext_resource type="PackedScene" uid="uid://b16bki12o36mf" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
 
 [node name="CosyVillage" type="Node2D"]
 
@@ -31,85 +32,116 @@ texture = ExtResource("2_1fpkn")
 [node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
 scale = Vector2(2.09422, 2.11328)
 
-[node name="FireTrees" type="Node" parent="."]
+[node name="YSORT" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="FireTree" parent="FireTrees" instance=ExtResource("6_ekpvo")]
-position = Vector2(974, 916)
-
-[node name="FireTree2" parent="FireTrees" instance=ExtResource("6_ekpvo")]
-position = Vector2(917, 962)
-
-[node name="FireTree3" parent="FireTrees" instance=ExtResource("6_ekpvo")]
-position = Vector2(1044, 965)
-
-[node name="FireTree4" parent="FireTrees" instance=ExtResource("6_ekpvo")]
-position = Vector2(1108, 978)
-
-[node name="FireTree5" parent="FireTrees" instance=ExtResource("6_ekpvo")]
-position = Vector2(817, 897)
-
-[node name="FireTree6" parent="FireTrees" instance=ExtResource("6_ekpvo")]
-position = Vector2(1201, 933)
-
-[node name="VillagerInstance" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(762, 562)
 
-[node name="VillagerInstance2" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance2" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(534, 676)
 
-[node name="VillagerInstance3" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance3" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(438, 760)
 
-[node name="VillagerInstance4" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance4" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(906, 613)
 
-[node name="VillagerInstance5" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance5" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(678, 727)
 
-[node name="VillagerInstance6" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance6" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(582, 811)
 
-[node name="VillagerInstance7" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance7" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(660, 463)
 
-[node name="VillagerInstance8" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance8" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(432, 577)
 
-[node name="VillagerInstance9" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance9" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(336, 661)
 
-[node name="VillagerInstance10" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance10" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(1071, 450)
 
-[node name="VillagerInstance11" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance11" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(843, 564)
 
-[node name="VillagerInstance12" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance12" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(747, 648)
 
-[node name="VillagerInstance13" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance13" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(935, 381)
 
-[node name="VillagerInstance14" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance14" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(707, 495)
 
-[node name="VillagerInstance15" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance15" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(611, 579)
 
-[node name="VillagerInstance16" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance16" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(516, 376)
 
-[node name="VillagerInstance17" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance17" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(288, 490)
 
-[node name="VillagerInstance18" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance18" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(192, 574)
 
-[node name="VillagerInstance19" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance19" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(516, 493)
 
-[node name="VillagerInstance20" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance20" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(288, 607)
 
-[node name="VillagerInstance21" parent="." instance=ExtResource("7_jhwky")]
+[node name="VillagerInstance21" parent="YSORT" instance=ExtResource("7_jhwky")]
+z_as_relative = false
 position = Vector2(192, 691)
+
+[node name="FireTree" parent="YSORT" instance=ExtResource("6_ekpvo")]
+z_as_relative = false
+position = Vector2(974, 916)
+
+[node name="FireTree2" parent="YSORT" instance=ExtResource("6_ekpvo")]
+z_as_relative = false
+position = Vector2(917, 962)
+
+[node name="FireTree3" parent="YSORT" instance=ExtResource("6_ekpvo")]
+z_as_relative = false
+position = Vector2(1044, 965)
+
+[node name="FireTree4" parent="YSORT" instance=ExtResource("6_ekpvo")]
+z_as_relative = false
+position = Vector2(1108, 978)
+
+[node name="FireTree5" parent="YSORT" instance=ExtResource("6_ekpvo")]
+z_as_relative = false
+position = Vector2(817, 897)
+
+[node name="FireTree6" parent="YSORT" instance=ExtResource("6_ekpvo")]
+z_as_relative = false
+position = Vector2(1201, 933)
+
+[node name="Ladan" parent="YSORT" instance=ExtResource("8_gfc0v")]
+position = Vector2(1200, 420)
