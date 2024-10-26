@@ -7,15 +7,18 @@
 size = Vector2(92, 156)
 
 [node name="VillagerInstance" type="CharacterBody2D"]
+y_sort_enabled = true
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_m4to7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.160004, -14.16)
+y_sort_enabled = true
+position = Vector2(2.98023e-08, -22)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_ereig")
+offset = Vector2(0, -61.045)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
+position = Vector2(-0.519958, -34.52)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0q22o")
