@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://djues00eptjrv"]
 
-[ext_resource type="Texture2D" uid="uid://dqae846wad4lk" path="res://art/square.png" id="1_cpolw"]
-[ext_resource type="Script" path="res://VillagerMovement.gd" id="2_hcft7"]
+[ext_resource type="Script" path="res://Scripts/VillagerMovement.gd" id="1_h8hph"]
+[ext_resource type="Texture2D" uid="uid://dqae846wad4lk" path="res://art/square.png" id="2_063rg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0q22o"]
 size = Vector2(222, 222)
@@ -14,10 +14,10 @@ position = Vector2(595, 331)
 [node name="Villager" type="CharacterBody2D" parent="."]
 position = Vector2(582, 313)
 scale = Vector2(0.5, 0.5)
-script = ExtResource("2_hcft7")
+script = ExtResource("1_h8hph")
 
 [node name="Sprite2D" type="Sprite2D" parent="Villager"]
-texture = ExtResource("1_cpolw")
+texture = ExtResource("2_063rg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Villager"]
 scale = Vector2(0.5, 0.5)
