@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=6 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
+[ext_resource type="PackedScene" uid="uid://cdevdb2f0xlsc" path="res://Scenes/World/clouds.tscn" id="2_44oqd"]
 [ext_resource type="Texture2D" uid="uid://djqymd685tooo" path="res://art/world/background.PNG" id="2_n8v0u"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
 
@@ -11,6 +12,8 @@
 
 [node name="Sky" type="Sprite2D" parent="Art"]
 texture = ExtResource("1_w4iek")
+
+[node name="Clouds" parent="Art" instance=ExtResource("2_44oqd")]
 
 [node name="Background" type="Sprite2D" parent="Art"]
 texture = ExtResource("2_n8v0u")
