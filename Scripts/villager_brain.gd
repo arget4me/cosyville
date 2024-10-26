@@ -18,7 +18,9 @@ func action_move_to():
 		await get_tree().create_timer(0.2).timeout
 		if(villager.is_on_dest):
 			exit = true
-	
+
+	# add score for the action we completed
+	ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[0]])
 	curr_plan.remove_at(0)
 	is_doing_action = false
 	

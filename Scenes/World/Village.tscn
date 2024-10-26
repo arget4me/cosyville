@@ -1,7 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceul5mf4uny0d"]
+[gd_scene load_steps=3 format=3 uid="uid://h4cbmw25b7lk"]
 
 [ext_resource type="PackedScene" uid="uid://biwreh4pxnlfm" path="res://Scenes/cosy_village_clicking_example.tscn" id="1_nj506"]
+[ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="2_6goce"]
 
 [node name="Village" type="Node2D"]
 
 [node name="CosyVillage" parent="." instance=ExtResource("1_nj506")]
+
+[node name="FireTree" parent="CosyVillage/YSORT" index="21"]
+position = Vector2(672, 962)
+
+[node name="FireTree2" parent="CosyVillage/YSORT" index="22"]
+position = Vector2(917, 991)
+
+[node name="FireTree3" parent="CosyVillage/YSORT" index="23"]
+position = Vector2(975, 867)
+
+[node name="FireTree4" parent="CosyVillage/YSORT" index="24"]
+position = Vector2(1037, 980)
+
+[node name="FireTree6" parent="CosyVillage/YSORT" index="26"]
+position = Vector2(1146, 933)
+
+[node name="FireTree7" parent="CosyVillage/YSORT" index="27" instance=ExtResource("2_6goce")]
+z_as_relative = false
+position = Vector2(1223, 919)
+
+[node name="FireTree8" parent="CosyVillage/YSORT" index="28" instance=ExtResource("2_6goce")]
+z_as_relative = false
+position = Vector2(1144, 690)
+
+[node name="FireTree9" parent="CosyVillage/YSORT" index="29" instance=ExtResource("2_6goce")]
+z_as_relative = false
+position = Vector2(130, 486)
+
+[node name="FireTree10" parent="CosyVillage/YSORT" index="30" instance=ExtResource("2_6goce")]
+z_as_relative = false
+position = Vector2(79, 935)
+
+[editable path="CosyVillage"]
