@@ -22,6 +22,18 @@ texture = ExtResource("1_w4iek")
 [node name="Background" type="Sprite2D" parent="Camera2D/Art"]
 texture = ExtResource("3_oicvn")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Camera2D/Art/Background"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Camera2D/Art/Background/StaticBody2D"]
+polygon = PackedVector2Array(-1000, -238, -1027, -611, 43, -665, 1143, -601, 1062, -420, 975, -453, 914, -430, 820, -416, 726, -409, 648, -420, 568, -423, 527, -396, 487, -352, 433, -315, 342, -261, 285, -248, 208, -251, 73, -258, -18, -261, -115, -235, -240, -231, -300, -261, -421, -261, -559, -248, -704, -265, -869, -235)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Camera2D/Art/Background"]
+visible = false
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Camera2D/Art/Background/StaticBody2D2"]
+polygon = PackedVector2Array(-1060, -275, -811, -265, -912, -171, -939, -2, -933, 290, -889, 411, -805, 462, -704, 482, -579, 492, -462, 495, -341, 492, -196, 509, -88, 519, 6, 519, 130, 519, 218, 509, 322, 479, 396, 448, 436, 398, 423, 344, 399, 314, 399, 280, 336, 236, 285, 213, 349, 196, 319, 176, 255, 189, 208, 166, 181, 139, 188, 102, 258, 85, 339, 68, 366, 31, 423, 8, 504, 8, 601, 21, 699, 38, 766, 51, 819, 77, 857, 105, 889, 108, 914, 78, 897, 11, 857, -60, 837, -134, 870, -187, 924, -248, 944, -278, 961, -379, 934, -420, 837, -440, 766, -477, 917, -551, 1281, -463, 1338, 314, 1215, 689, 445, 782, -1194, 757)
+
 [node name="YSORT" type="Node2D" parent="."]
 y_sort_enabled = true
 
