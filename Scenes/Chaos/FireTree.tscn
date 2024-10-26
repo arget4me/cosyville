@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://74idepem82pk"]
+[gd_scene load_steps=8 format=3 uid="uid://74idepem82pk"]
 
 [ext_resource type="Script" path="res://Scripts/Chaos/fire_tree.gd" id="1_yah28"]
 [ext_resource type="Texture2D" uid="uid://bourbn4gtr4lr" path="res://art/world/Props/Tree.PNG" id="2_i8xu2"]
+[ext_resource type="Script" path="res://Scripts/SetRandomSprite.gd" id="3_as5y0"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_qv68i"]
 [ext_resource type="Script" path="res://Scripts/Chaos/chaos_triggerable.gd" id="4_iih2h"]
+[ext_resource type="Texture2D" uid="uid://cglod62rgxd8e" path="res://art/world/Props/Tree_02.PNG" id="4_o6ar8"]
 [ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="5_tyk5l"]
 
 [node name="FireTree" type="Node2D"]
@@ -15,6 +17,8 @@ position = Vector2(3, -1.00002)
 scale = Vector2(0.320001, 0.44)
 texture = ExtResource("2_i8xu2")
 offset = Vector2(0, -102.01)
+script = ExtResource("3_as5y0")
+sprites = Array[Texture2D]([ExtResource("4_o6ar8")])
 
 [node name="Clickable" parent="." instance=ExtResource("3_qv68i")]
 position = Vector2(2, -43)

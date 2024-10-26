@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://drcremtc81tqt"]
+
+[ext_resource type="Script" path="res://Scripts/Chaos/fire_tree.gd" id="1_ki5cj"]
+[ext_resource type="Texture2D" uid="uid://bncinem4im3j6" path="res://art/world/Props/Tree_Apples_02.PNG" id="2_rs20t"]
+[ext_resource type="Script" path="res://Scripts/SetRandomSprite.gd" id="3_dveex"]
+[ext_resource type="Texture2D" uid="uid://m4ug06o5kbwi" path="res://art/world/Props/Tree_Apples.PNG" id="4_0f0vi"]
+[ext_resource type="Texture2D" uid="uid://b5fw6vi8bm0q6" path="res://art/world/Props/Tree_03.PNG" id="5_obpww"]
+[ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="6_1lgff"]
+[ext_resource type="Script" path="res://Scripts/Chaos/chaos_triggerable.gd" id="7_vg2t8"]
+[ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="8_xq26l"]
+
+[node name="FireTree_Apples" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_ki5cj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("2_rs20t")
+offset = Vector2(0, -52.435)
+script = ExtResource("3_dveex")
+sprites = Array[Texture2D]([ExtResource("4_0f0vi"), ExtResource("5_obpww")])
+
+[node name="Clickable" parent="." instance=ExtResource("6_1lgff")]
+position = Vector2(2, -48)
+scale = Vector2(1.18828, 1.89487)
+pointer_state = 1
+clicking_is_enabled = false
+
+[node name="ChaosTriggerable" type="Node" parent="."]
+script = ExtResource("7_vg2t8")
+trigger_probability = 0.02
+cooldown_time = 30.0
+
+[node name="DamageArea" parent="." instance=ExtResource("8_xq26l")]
+position = Vector2(2, -44)
+scale = Vector2(4, 6.959)
+
+[connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
+[connection signal="trigger_chaos" from="ChaosTriggerable" to="." method="_on_node_trigger_chaos"]
