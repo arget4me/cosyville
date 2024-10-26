@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://74idepem82pk"]
+
+[ext_resource type="Script" path="res://Scripts/Chaos/fire_tree.gd" id="1_yah28"]
+[ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_yg0ch"]
+[ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_qv68i"]
+[ext_resource type="Script" path="res://Scripts/Chaos/chaos_triggerable.gd" id="4_iih2h"]
+
+[node name="FireTree" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_yah28")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -65)
+scale = Vector2(0.239999, 1)
+texture = ExtResource("2_yg0ch")
+
+[node name="Clickable" parent="." instance=ExtResource("3_qv68i")]
+position = Vector2(0, -65)
+scale = Vector2(0.528617, 2.12)
+pointer_state = 1
+clicking_is_enabled = false
+
+[node name="ChaosTriggerable" type="Node" parent="."]
+script = ExtResource("4_iih2h")
+trigger_probability = 0.02
+cooldown_time = 30.0
+
+[connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
+[connection signal="trigger_chaos" from="ChaosTriggerable" to="." method="_on_node_trigger_chaos"]

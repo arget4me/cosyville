@@ -1,29 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=7 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
 [ext_resource type="PackedScene" uid="uid://cdevdb2f0xlsc" path="res://Scenes/World/clouds.tscn" id="2_44oqd"]
-[ext_resource type="Texture2D" uid="uid://djqymd685tooo" path="res://art/world/background.PNG" id="2_n8v0u"]
+[ext_resource type="Texture2D" uid="uid://b56ar24cwrrtb" path="res://art/world/background_.PNG" id="3_oicvn"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
+[ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
 
 [node name="CosyVillage" type="Node2D"]
 
-[node name="Art" type="Node2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(962, 543)
 
-[node name="Sky" type="Sprite2D" parent="Art"]
+[node name="Art" type="Node2D" parent="Camera2D"]
+
+[node name="Sky" type="Sprite2D" parent="Camera2D/Art"]
 texture = ExtResource("1_w4iek")
 
-[node name="Clouds" parent="Art" instance=ExtResource("2_44oqd")]
+[node name="Clouds" parent="Camera2D/Art" instance=ExtResource("2_44oqd")]
 
-[node name="Background" type="Sprite2D" parent="Art"]
-texture = ExtResource("2_n8v0u")
+[node name="Background" type="Sprite2D" parent="Camera2D/Art"]
+texture = ExtResource("3_oicvn")
 
 [node name="Village" type="Sprite2D" parent="."]
-position = Vector2(-519, -115)
+position = Vector2(454, 507)
 scale = Vector2(0.319999, 0.319999)
 texture = ExtResource("2_1fpkn")
 
 [node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
 scale = Vector2(2.09422, 2.11328)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="FireTree" parent="." instance=ExtResource("6_ekpvo")]
+position = Vector2(974, 916)
+
+[node name="FireTree2" parent="." instance=ExtResource("6_ekpvo")]
+position = Vector2(917, 962)
+
+[node name="FireTree3" parent="." instance=ExtResource("6_ekpvo")]
+position = Vector2(1044, 965)
+
+[node name="FireTree4" parent="." instance=ExtResource("6_ekpvo")]
+position = Vector2(1108, 978)
+
+[node name="FireTree5" parent="." instance=ExtResource("6_ekpvo")]
+position = Vector2(817, 897)
+
+[node name="FireTree6" parent="." instance=ExtResource("6_ekpvo")]
+position = Vector2(1201, 933)

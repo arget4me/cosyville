@@ -3,7 +3,7 @@ extends Node
 signal on_score_update(score : int)
 
 var score = 0
-var score_per_second = 100
+var score_per_second = 0
 var timer : Timer
 
 func _ready():
