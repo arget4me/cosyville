@@ -16,6 +16,14 @@ layout_mode = 0
 text = "GOTO: PLAYING"
 goto_state_on_click = 1
 
+[node name="QuitButton" parent="." instance=ExtResource("1_kiwh3")]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 267.0
+text = "QUIT
+"
+script = null
+
 [node name="RichTextLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 353.0
@@ -33,3 +41,5 @@ Both chopping wood and fishing they get stuck after a while there, they dont req
 Also damage isnt taken from the chaos events anymore.
 "
 autowrap_mode = 2
+
+[connection signal="pressed" from="QuitButton" to="GotoStateButton" method="_on_goto_state_button_2_pressed"]
