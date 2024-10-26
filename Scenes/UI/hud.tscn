@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://hotmtqqtnl8k"]
+[gd_scene load_steps=6 format=3 uid="uid://hotmtqqtnl8k"]
 
 [ext_resource type="Script" path="res://Scripts/UI/score_label.gd" id="1_8ru84"]
 [ext_resource type="Theme" uid="uid://wvo4711uwpjg" path="res://Themes/UI/Score_Theme.tres" id="1_u7egp"]
 [ext_resource type="PackedScene" uid="uid://cylkrwqd42mhu" path="res://Scenes/UI/toolbar.tscn" id="2_5nls7"]
+[ext_resource type="Texture2D" uid="uid://cgtomismlwwyu" path="res://art/People/VillagerMale.png" id="4_nt7l7"]
+[ext_resource type="Script" path="res://Scenes/UI/villager_label.gd" id="5_a04vf"]
 
 [node name="HUD" type="Control"]
 self_modulate = Color(1, 1, 1, 0)
@@ -32,3 +34,26 @@ anchor_bottom = 1.0
 offset_top = -89.52
 offset_bottom = -21.52
 grow_vertical = 0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.535
+offset_top = 43.0
+offset_right = -27.535
+offset_bottom = 109.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("4_nt7l7")
+expand_mode = 2
+
+[node name="VillagerLabel" type="Label" parent="HSplitContainer"]
+layout_mode = 2
+theme = ExtResource("1_u7egp")
+text = "x {99}"
+script = ExtResource("5_a04vf")

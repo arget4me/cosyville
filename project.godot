@@ -24,6 +24,7 @@ MouseImageManager="*res://Scripts/Singletons/mouse_image_manager.gd"
 ChaosManager="*res://Scripts/Singletons/chaos_manager.gd"
 GoapManager="*res://Scripts/Singletons/goap_manager.gd"
 ActionPointsManager="*res://Scripts/Singletons/action_points_manager.gd"
+VillagerManager="*res://Scripts/Singletons/villager_manager.gd"
 
 [display]
 

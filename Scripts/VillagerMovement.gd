@@ -13,7 +13,7 @@ func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_direction * speed
 	if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
-		print(get_global_mouse_position())
+		#print(get_global_mouse_position())
 		destination = get_global_mouse_position()
 	elif(velocity == Vector2.ZERO && destination == Vector2.ZERO):
 		destination = Vector2.ZERO
@@ -36,7 +36,7 @@ func _physics_process(delta):
 	#	if(destination == Vector2(-1,-1)):
 	#		return
 	#action_do_move(destination)
-	print(velocity)
+	# print(velocity)
 	move_and_slide()
 	
 func kill_villager():
