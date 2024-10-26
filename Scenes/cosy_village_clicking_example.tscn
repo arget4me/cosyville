@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=11 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="PackedScene" uid="uid://cdevdb2f0xlsc" path="res://Scenes/World/clouds.tscn" id="2_44oqd"]
@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://Scenes/villager_spawner.gd" id="4_mljib"]
 [ext_resource type="PackedScene" uid="uid://djvoabshp5qu8" path="res://Scenes/Chaos/FishingSpot.tscn" id="6_b455v"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
-[ext_resource type="PackedScene" uid="uid://702f3n8od2c0" path="res://Scenes/World/house_red.tscn" id="7_af8d8"]
-[ext_resource type="PackedScene" uid="uid://bvi118sov2jxo" path="res://Scenes/World/house_yellow.tscn" id="8_dkhfv"]
-[ext_resource type="PackedScene" uid="uid://b16bki12o36mf" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
-[ext_resource type="PackedScene" uid="uid://drcremtc81tqt" path="res://Scenes/Chaos/FireTree_Apples.tscn" id="9_lrgvo"]
+[ext_resource type="PackedScene" path="res://Scenes/World/house_red.tscn" id="7_af8d8"]
+[ext_resource type="PackedScene" path="res://Scenes/World/house_yellow.tscn" id="8_dkhfv"]
+[ext_resource type="PackedScene" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
+[ext_resource type="PackedScene" path="res://Scenes/Chaos/FireTree_Apples.tscn" id="9_lrgvo"]
 
 [node name="CosyVillage" type="Node2D"]
 
