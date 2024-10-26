@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://das4u2lg25k8s"]
+
+[ext_resource type="StyleBox" uid="uid://bxayu5daw8dej" path="res://Themes/UI/PanelContainer_Default.tres" id="1_7xquc"]
+[ext_resource type="StyleBox" uid="uid://k1ift0jgltme" path="res://Themes/UI/Button_Default.tres" id="1_vbngi"]
+
+[resource]
+Button/constants/icon_max_width = 32
+Button/constants/outline_size = 11
+Button/font_sizes/font_size = 20
+Button/styles/normal = ExtResource("1_vbngi")
+HBoxContainer/constants/separation = 6
+PanelContainer/styles/panel = ExtResource("1_7xquc")

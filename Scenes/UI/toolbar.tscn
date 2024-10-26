@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cylkrwqd42mhu"]
+
+[ext_resource type="Theme" uid="uid://das4u2lg25k8s" path="res://Themes/UI/ToolbarTheme.tres" id="1_00n4h"]
+[ext_resource type="PackedScene" uid="uid://qb8g6koi43q6" path="res://Scenes/UI/tool_bar_button.tscn" id="2_iphwk"]
+
+[node name="Toolbar" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -34.0
+offset_right = 169.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_00n4h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("1_00n4h")
+alignment = 1
+
+[node name="ToolBarButton" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+layout_mode = 2
+
+[node name="ToolBarButton2" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+layout_mode = 2
+icon = null
+
+[node name="ToolBarButton3" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+layout_mode = 2
+icon = null
+
+[node name="ToolBarButton4" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+layout_mode = 2
+icon = null
+
+[node name="ToolBarButton5" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+layout_mode = 2
+icon = null
+
+[node name="ToolBarButton6" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+layout_mode = 2
+icon = null

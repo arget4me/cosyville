@@ -6,11 +6,13 @@
 
 [node name="CosyVillage" type="Node2D"]
 
-[node name="HUD" parent="." instance=ExtResource("1_skgd2")]
-
 [node name="Village" type="Sprite2D" parent="."]
 position = Vector2(438, 353)
 texture = ExtResource("2_1fpkn")
 
 [node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
 scale = Vector2(2.09422, 2.11328)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("1_skgd2")]

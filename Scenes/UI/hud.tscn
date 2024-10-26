@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://hotmtqqtnl8k"]
+[gd_scene load_steps=3 format=3 uid="uid://hotmtqqtnl8k"]
 
 [ext_resource type="Script" path="res://Scripts/UI/score_label.gd" id="1_8ru84"]
+[ext_resource type="PackedScene" uid="uid://cylkrwqd42mhu" path="res://Scenes/UI/toolbar.tscn" id="2_5nls7"]
 
 [node name="HUD" type="Control"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,3 +21,12 @@ offset_bottom = 41.0
 scale = Vector2(3.34281, 3.34281)
 text = "Score: 0"
 script = ExtResource("1_8ru84")
+
+[node name="Toolbar" parent="." instance=ExtResource("2_5nls7")]
+layout_mode = 1
+anchors_preset = 7
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -89.52
+offset_bottom = -21.52
+grow_vertical = 0
