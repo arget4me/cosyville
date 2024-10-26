@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name VillagerClass
 
 @export var speed = 100
 var destination: Vector2

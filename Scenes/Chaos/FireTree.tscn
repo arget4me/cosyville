@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://74idepem82pk"]
+[gd_scene load_steps=6 format=3 uid="uid://74idepem82pk"]
 
 [ext_resource type="Script" path="res://Scripts/Chaos/fire_tree.gd" id="1_yah28"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_yg0ch"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_qv68i"]
 [ext_resource type="Script" path="res://Scripts/Chaos/chaos_triggerable.gd" id="4_iih2h"]
+[ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="5_tyk5l"]
 
 [node name="FireTree" type="Node2D"]
 y_sort_enabled = true
@@ -24,6 +25,10 @@ clicking_is_enabled = false
 script = ExtResource("4_iih2h")
 trigger_probability = 0.02
 cooldown_time = 30.0
+
+[node name="DamageArea" parent="." instance=ExtResource("5_tyk5l")]
+position = Vector2(0, -64)
+scale = Vector2(1.56, 6.4)
 
 [connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
 [connection signal="trigger_chaos" from="ChaosTriggerable" to="." method="_on_node_trigger_chaos"]

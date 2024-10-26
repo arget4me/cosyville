@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dymkfwg58tqik"]
+
+[ext_resource type="Script" path="res://Scripts/Chaos/damage_area.gd" id="1_0cp1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1q8m"]
+
+[node name="DamageArea" type="Area2D"]
+script = ExtResource("1_0cp1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i1q8m")
+debug_color = Color(0.996388, 0, 0.187683, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
