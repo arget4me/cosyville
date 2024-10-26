@@ -2,7 +2,9 @@ extends CharacterBody2D
 class_name VillagerClass
 
 @export var speed = 100
-var destination: Vector2 = Vector2 (-1,-1)
+var destination: Vector2
+var goto_pos: Vector2 = Vector2(-1,-1)
+var is_on_dest = false
 
 signal death
 
@@ -25,9 +27,14 @@ func get_input():
 		velocity = direction * speed
 
 func action_do_move(destination: Vector2):
+	is_on_dest = true
 	if global_position.distance_to(destination) > 1.0:
 		var direction = (destination - position).normalized()
 		velocity = direction * speed
+		is_on_dest = false
+
+func set_destination(position: Vector2):
+	goto_pos = position
 
 func _physics_process(delta):
 	get_input()
@@ -37,6 +44,11 @@ func _physics_process(delta):
 	#		return
 	#action_do_move(destination)
 	# print(velocity)
+
+	if(goto_pos == Vector2(-1,-1)):
+		return
+	action_do_move(goto_pos)
+	print(velocity)
 	move_and_slide()
 	
 func kill_villager():

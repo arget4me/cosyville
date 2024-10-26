@@ -29,7 +29,7 @@ cooldown_time = 30.0
 
 [node name="DamageArea" parent="." instance=ExtResource("5_tyk5l")]
 position = Vector2(2, -31)
-scale = Vector2(1.68651, 4.06507)
+scale = Vector2(4, 9.639)
 
 [connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
 [connection signal="trigger_chaos" from="ChaosTriggerable" to="." method="_on_node_trigger_chaos"]
