@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdhaio15xpnqq"]
+[gd_scene load_steps=3 format=3 uid="uid://cdhaio15xpnqq"]
 
 [ext_resource type="PackedScene" uid="uid://bopgndiinr47l" path="res://Scenes/UI/goto_state_button.tscn" id="1_kiwh3"]
+[ext_resource type="Theme" uid="uid://wvo4711uwpjg" path="res://Themes/UI/Score_Theme.tres" id="2_kof4l"]
 
 [node name="StartUi" type="Control"]
 layout_mode = 3
@@ -14,3 +15,21 @@ grow_vertical = 2
 layout_mode = 0
 text = "GOTO: PLAYING"
 goto_state_on_click = 1
+
+[node name="RichTextLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 128.0
+offset_right = 1828.0
+offset_bottom = 922.0
+theme = ExtResource("2_kof4l")
+text = "NOTES FROM ALEN:
+Added an fishing action so we have some more diversity.
+
+It would be nice if we added that while trees are burning they can't request plan for chopping wood, and then more of them go fishing. Vice versa when the chaos event in fishing happens (can be just a kraken spawning instead of burning tree or so).
+
+Needs to be fixed:
+Both chopping wood and fishing they get stuck after a while there, they dont request new plans.
+Also damage isnt taken from the chaos events anymore.
+"
+autowrap_mode = 2
