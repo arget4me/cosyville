@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://iieqqrtyc0b1"]
 
-[ext_resource type="PackedScene" path="res://Scenes/UI/goto_state_button.tscn" id="1_bwqvq"]
+[ext_resource type="PackedScene" uid="uid://bopgndiinr47l" path="res://Scenes/UI/goto_state_button.tscn" id="1_bwqvq"]
 
 [node name="PlayingUi" type="Control"]
 layout_mode = 3
