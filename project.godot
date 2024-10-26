@@ -21,6 +21,13 @@ GameManager="*res://Scripts/Singletons/game_manager.gd"
 ClickingManager="*res://Scripts/Singletons/clicking_manager.gd"
 MouseImageManager="*res://Scripts/Singletons/mouse_image_manager.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
 [input]
 
 click={
