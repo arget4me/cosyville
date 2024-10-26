@@ -4,6 +4,9 @@ enum game_state {START, PLAYING, PAUSE, GAME_OVER, VICTORY}
 var current_state = game_state.START
 signal on_game_state_changed(state : game_state)
 
+func _ready() -> void:
+	on_game_state_changed.emit(current_state)
+
 func transition_to_state(state: game_state) -> void:
 	if(current_state == state):
 		return
