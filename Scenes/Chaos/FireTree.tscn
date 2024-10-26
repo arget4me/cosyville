@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bourbn4gtr4lr" path="res://art/world/Props/Tree.PNG" id="2_i8xu2"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_qv68i"]
 [ext_resource type="Script" path="res://Scripts/Chaos/chaos_triggerable.gd" id="4_iih2h"]
-[ext_resource type="PackedScene" path="res://Scenes/Chaos/damage_area.tscn" id="5_tyk5l"]
+[ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="5_tyk5l"]
 
 [node name="FireTree" type="Node2D"]
 y_sort_enabled = true
@@ -29,7 +29,7 @@ cooldown_time = 30.0
 
 [node name="DamageArea" parent="." instance=ExtResource("5_tyk5l")]
 position = Vector2(2, -31)
-scale = Vector2(1.68651, 4.06507)
+scale = Vector2(4, 9.639)
 
 [connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
 [connection signal="trigger_chaos" from="ChaosTriggerable" to="." method="_on_node_trigger_chaos"]
