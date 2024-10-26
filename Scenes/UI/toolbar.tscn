@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cylkrwqd42mhu"]
+[gd_scene load_steps=5 format=3 uid="uid://cylkrwqd42mhu"]
 
 [ext_resource type="Theme" uid="uid://das4u2lg25k8s" path="res://Themes/UI/ToolbarTheme.tres" id="1_00n4h"]
+[ext_resource type="Script" path="res://Scripts/UI/toolbar.gd" id="2_8xlbv"]
 [ext_resource type="PackedScene" uid="uid://qb8g6koi43q6" path="res://Scenes/UI/tool_bar_button.tscn" id="2_iphwk"]
+[ext_resource type="Texture2D" uid="uid://s27mv41x26fs" path="res://art/cursors/PointingHand.png" id="3_eqb05"]
 
 [node name="Toolbar" type="PanelContainer"]
 anchors_preset = 8
@@ -16,31 +18,39 @@ offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_00n4h")
+script = ExtResource("2_8xlbv")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 theme = ExtResource("1_00n4h")
 alignment = 1
 
-[node name="ToolBarButton" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+[node name="Pointer" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
 layout_mode = 2
+icon = ExtResource("3_eqb05")
 
-[node name="ToolBarButton2" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
+[node name="Waterbucket" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
 layout_mode = 2
-icon = null
 
 [node name="ToolBarButton3" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
 layout_mode = 2
+disabled = true
 icon = null
 
 [node name="ToolBarButton4" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
 layout_mode = 2
+disabled = true
 icon = null
 
 [node name="ToolBarButton5" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
 layout_mode = 2
+disabled = true
 icon = null
 
 [node name="ToolBarButton6" parent="HBoxContainer" instance=ExtResource("2_iphwk")]
 layout_mode = 2
+disabled = true
 icon = null
+
+[connection signal="pressed" from="HBoxContainer/Pointer" to="." method="_on_pointer_pressed"]
+[connection signal="pressed" from="HBoxContainer/Waterbucket" to="." method="_on_waterbucket_pressed"]
