@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=3 format=3 uid="uid://biwreh4pxnlfm"]
 
-[ext_resource type="PackedScene" uid="uid://hotmtqqtnl8k" path="res://Scenes/UI/hud.tscn" id="1_skgd2"]
 [ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
 
@@ -12,7 +11,3 @@ texture = ExtResource("2_1fpkn")
 
 [node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
 scale = Vector2(2.09422, 2.11328)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("1_skgd2")]
