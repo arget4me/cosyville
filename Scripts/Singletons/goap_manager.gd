@@ -58,5 +58,4 @@ func request_plan(goal, world_state: Array) -> Array:
 		for key in actions:
 			if(index == id):
 				actions_plan.append(key)
-	print(actions_plan)
-	return[]
+	return actions_plan
