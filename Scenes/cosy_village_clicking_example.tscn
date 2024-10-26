@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=7 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
-[ext_resource type="Texture2D" uid="uid://opqyabh6tg2e" path="res://icon.svg" id="2_1fpkn"]
 [ext_resource type="PackedScene" uid="uid://cdevdb2f0xlsc" path="res://Scenes/World/clouds.tscn" id="2_44oqd"]
 [ext_resource type="Texture2D" uid="uid://b56ar24cwrrtb" path="res://art/world/background_.PNG" id="3_oicvn"]
-[ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_v8xti"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
 [ext_resource type="PackedScene" uid="uid://dqwcom1xx1r5h" path="res://Scenes/villager_instance.tscn" id="7_jhwky"]
 [ext_resource type="PackedScene" uid="uid://b16bki12o36mf" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
@@ -23,14 +21,6 @@ texture = ExtResource("1_w4iek")
 
 [node name="Background" type="Sprite2D" parent="Camera2D/Art"]
 texture = ExtResource("3_oicvn")
-
-[node name="Village" type="Sprite2D" parent="."]
-position = Vector2(454, 507)
-scale = Vector2(0.319999, 0.319999)
-texture = ExtResource("2_1fpkn")
-
-[node name="Clickable" parent="Village" instance=ExtResource("3_v8xti")]
-scale = Vector2(2.09422, 2.11328)
 
 [node name="YSORT" type="Node2D" parent="."]
 y_sort_enabled = true
