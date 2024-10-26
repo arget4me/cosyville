@@ -4,6 +4,8 @@ class_name VillagerClass
 @export var speed = 100
 var destination: Vector2 = Vector2 (-1,-1)
 
+signal death
+
 func _ready() -> void:
 	InputMap.load_from_project_settings()
 
@@ -36,3 +38,7 @@ func _physics_process(delta):
 	#action_do_move(destination)
 	print(velocity)
 	move_and_slide()
+	
+func kill_villager():
+	death.emit()
+	queue_free()
