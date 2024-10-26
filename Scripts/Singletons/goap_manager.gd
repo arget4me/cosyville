@@ -7,12 +7,15 @@ var action_name_to_score= {}
 func _ready() -> void:
 	actions["GO_TO_POS"] = goap_action.new(["at_pos"],[])
 	actions["DO_ACTION"] = goap_action.new(["do_action"],["at_pos"])
+	actions["DO_FISHING"] = goap_action.new(["do_fishing"],["at_pos"])
 	
 	action_name_to_index["GO_TO_POS"] = 0
 	action_name_to_index["DO_ACTION"] = 1
+	action_name_to_index["DO_FISHING"] = 2
 	
 	action_name_to_score["GO_TO_POS"] = 3
 	action_name_to_score["DO_ACTION"] = 10
+	action_name_to_score["DO_FISHING"] = 16
 
 func request_plan(goal, world_state: Array) -> Array:
 	#setup nodes for astar

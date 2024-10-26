@@ -38,12 +38,6 @@ func set_destination(position: Vector2):
 
 func _physics_process(delta):
 	get_input()
-	#if(destination == Vector2(-1,-1)):
-	#	destination = ActionPointsManager.get_random_action_point_position()
-	#	if(destination == Vector2(-1,-1)):
-	#		return
-	#action_do_move(destination)
-	# print(velocity)
 
 	if(goto_pos == Vector2(-1,-1)):
 		return
