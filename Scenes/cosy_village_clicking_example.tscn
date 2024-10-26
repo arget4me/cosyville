@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://biwreh4pxnlfm"]
+[gd_scene load_steps=9 format=3 uid="uid://biwreh4pxnlfm"]
 
 [ext_resource type="Texture2D" uid="uid://cr3o4hp2ichjw" path="res://art/world/sky.PNG" id="1_w4iek"]
 [ext_resource type="PackedScene" uid="uid://cdevdb2f0xlsc" path="res://Scenes/World/clouds.tscn" id="2_44oqd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
 [ext_resource type="PackedScene" uid="uid://702f3n8od2c0" path="res://Scenes/World/house_red.tscn" id="7_af8d8"]
 [ext_resource type="PackedScene" uid="uid://dqwcom1xx1r5h" path="res://Scenes/villager_instance.tscn" id="7_jhwky"]
+[ext_resource type="PackedScene" uid="uid://bvi118sov2jxo" path="res://Scenes/World/house_yellow.tscn" id="8_dkhfv"]
 [ext_resource type="PackedScene" uid="uid://b16bki12o36mf" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
 
 [node name="CosyVillage" type="Node2D"]
@@ -112,7 +113,7 @@ position = Vector2(192, 574)
 
 [node name="VillagerInstance19" parent="YSORT" instance=ExtResource("7_jhwky")]
 z_as_relative = false
-position = Vector2(516, 493)
+position = Vector2(486, 565)
 
 [node name="VillagerInstance20" parent="YSORT" instance=ExtResource("7_jhwky")]
 z_as_relative = false
@@ -158,6 +159,17 @@ rotation = -0.0929171
 scale = Vector2(1.08, 1.32)
 
 [node name="House_Red3" parent="YSORT" instance=ExtResource("7_af8d8")]
-position = Vector2(522, 488)
-rotation = 0.0699173
-scale = Vector2(0.949116, 1.32)
+position = Vector2(547, 650)
+rotation = -0.125418
+scale = Vector2(1.27349, 1.3697)
+
+[node name="House_Yellow" parent="YSORT" instance=ExtResource("8_dkhfv")]
+position = Vector2(526, 499)
+
+[node name="House_Yellow2" parent="YSORT" instance=ExtResource("8_dkhfv")]
+position = Vector2(351, 807)
+scale = Vector2(1.20732, 1.33811)
+
+[node name="House_Yellow3" parent="YSORT" instance=ExtResource("8_dkhfv")]
+position = Vector2(439, 432)
+scale = Vector2(0.860967, 0.969581)
