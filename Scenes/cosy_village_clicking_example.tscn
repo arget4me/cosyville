@@ -6,9 +6,10 @@
 [ext_resource type="Script" path="res://Scenes/villager_spawner.gd" id="4_mljib"]
 [ext_resource type="PackedScene" uid="uid://djvoabshp5qu8" path="res://Scenes/Chaos/FishingSpot.tscn" id="6_b455v"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="6_ekpvo"]
-[ext_resource type="PackedScene" path="res://Scenes/World/house_red.tscn" id="7_af8d8"]
-[ext_resource type="PackedScene" path="res://Scenes/World/house_yellow.tscn" id="8_dkhfv"]
-[ext_resource type="PackedScene" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
+[ext_resource type="PackedScene" uid="uid://702f3n8od2c0" path="res://Scenes/World/house_red.tscn" id="7_af8d8"]
+[ext_resource type="PackedScene" uid="uid://bvi118sov2jxo" path="res://Scenes/World/house_yellow.tscn" id="8_dkhfv"]
+[ext_resource type="PackedScene" uid="uid://b16bki12o36mf" path="res://Scenes/World/ladan.tscn" id="8_gfc0v"]
+[ext_resource type="PackedScene" uid="uid://drcremtc81tqt" path="res://Scenes/Chaos/FireTree_Apples.tscn" id="9_lrgvo"]
 
 [node name="CosyVillage" type="Node2D"]
 
@@ -100,3 +101,18 @@ scale = Vector2(1.20732, 1.33811)
 [node name="House_Yellow3" parent="YSORT" instance=ExtResource("8_dkhfv")]
 position = Vector2(439, 432)
 scale = Vector2(0.860967, 0.969581)
+
+[node name="FireTree_Apples3" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(144, 398)
+
+[node name="FireTree_Apples4" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(400, 380)
+
+[node name="FireTree_Apples5" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(306, 342)
+
+[node name="FireTree_Apples6" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(44, 410)
+
+[node name="FireTree_Apples7" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(1590, 544)
