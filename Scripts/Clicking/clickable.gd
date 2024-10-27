@@ -20,6 +20,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	
 	if event.is_action_pressed("click") and pointer_state == MouseImageManager.current_state:
 		on_clicked.emit()
+		on_display_clickable.emit()
 
 func _on_add_score():
 	ClickingManager.add_score(1)
