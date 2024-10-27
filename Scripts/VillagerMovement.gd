@@ -5,6 +5,10 @@ class_name VillagerClass
 var destination: Vector2
 var goto_pos: Vector2 = Vector2(-1,-1)
 var is_on_dest = false
+var max_speed = speed * 2
+var speed_increase = 1
+var speed_increase_time = 5
+var speed_increase_counter = 0
 
 @onready var anim = $AnimationPlayer
 
@@ -54,6 +58,15 @@ func _physics_process(delta):
 		return
 	action_do_move(goto_pos)
 	move_and_slide()
+	
+	speed_increase_counter += delta
+	if(speed_increase_counter > speed_increase_time):
+		speed_increase_counter = 0
+		var random_int = randi_range(1,20)
+		if(random_int == 5):
+			speed = 300
+		if(speed < max_speed):
+			speed += speed_increase
 	
 func kill_villager():
 	is_dead = true
