@@ -28,6 +28,9 @@ position = Vector2(1263, 609)
 [node name="FishingSpot3" parent="CosyVillage/YSORT" index="8"]
 position = Vector2(1405, 558)
 
+[node name="Ladan" parent="CosyVillage/YSORT" index="9"]
+script = null
+
 [node name="House_Red" parent="CosyVillage/YSORT" index="10"]
 modulate = Color(1, 1, 1, 1)
 

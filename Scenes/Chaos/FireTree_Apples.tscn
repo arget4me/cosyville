@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drcremtc81tqt"]
+[gd_scene load_steps=10 format=3 uid="uid://c21u2abul5ga1"]
 
 [ext_resource type="Script" path="res://Scripts/Chaos/fire_tree.gd" id="1_ki5cj"]
 [ext_resource type="Texture2D" uid="uid://bncinem4im3j6" path="res://art/world/Props/Tree_Apples_02.PNG" id="2_rs20t"]
