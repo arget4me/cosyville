@@ -38,6 +38,7 @@ func action_move_to():
 	is_doing_action = false
 	
 func action_chop_wood():
+	SoundManager.play_sfx('chop')
 	is_doing_action = true
 	var plan_index = curr_plan.size() - 1
 	if(!plan_failed):
