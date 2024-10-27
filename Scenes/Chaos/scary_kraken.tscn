@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvwh76w475sjf"]
+
+[ext_resource type="Script" path="res://Scripts/kraken.gd" id="1_g4bcs"]
+[ext_resource type="Texture2D" uid="uid://dqae846wad4lk" path="res://art/square.png" id="2_6w8fa"]
+[ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="3_bp8m0"]
+[ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="4_x7cd4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fn5k1"]
+
+[node name="ScaryKraken" type="Node2D"]
+
+[node name="Kraken" type="CharacterBody2D" parent="." node_paths=PackedStringArray("waypoint_nodes")]
+position = Vector2(1606, 718)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_g4bcs")
+waypoint_nodes = [NodePath("../KrakenWaypoints/waypoint1"), NodePath("../KrakenWaypoints/waypoint2"), NodePath("../KrakenWaypoints/waypoint3"), NodePath("../KrakenWaypoints/waypoint4"), NodePath("../KrakenWaypoints/waypoint5"), NodePath("../KrakenWaypoints/waypoint6"), NodePath("../KrakenWaypoints/waypoint7"), NodePath("../KrakenWaypoints/waypoint8"), NodePath("../KrakenWaypoints/waypoint9"), NodePath("../KrakenWaypoints/startpoint")]
+
+[node name="Sprite2D" type="Sprite2D" parent="Kraken"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_6w8fa")
+
+[node name="DamageArea" parent="Kraken" instance=ExtResource("3_bp8m0")]
+scale = Vector2(6.5, 6.5)
+damage_area_active = true
+
+[node name="Clickable" parent="Kraken" instance=ExtResource("4_x7cd4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kraken"]
+shape = SubResource("CircleShape2D_fn5k1")
+
+[node name="KrakenWaypoints" type="Node2D" parent="."]
+
+[node name="startpoint" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1569, 710)
+
+[node name="waypoint1" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1782, 858)
+
+[node name="waypoint2" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1507, 876)
+
+[node name="waypoint3" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1853, 739)
+
+[node name="waypoint4" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1776, 642)
+
+[node name="waypoint5" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1549, 585)
+
+[node name="waypoint6" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1372, 606)
+
+[node name="waypoint7" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1211, 668)
+
+[node name="waypoint8" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1272, 733)
+
+[node name="waypoint9" type="Node2D" parent="KrakenWaypoints"]
+position = Vector2(1404, 858)
+
+[connection signal="on_clicked" from="Kraken/Clickable" to="Kraken" method="_on_clickable_on_clicked"]
