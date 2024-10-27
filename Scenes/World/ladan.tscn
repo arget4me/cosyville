@@ -1,12 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://b16bki12o36mf"]
+[gd_scene load_steps=14 format=3 uid="uid://b16bki12o36mf"]
 
 [ext_resource type="Texture2D" uid="uid://k1bomiv5xy1k" path="res://art/world/Props/ladan.PNG" id="1_toibe"]
 [ext_resource type="Script" path="res://Scripts/World/ladan_animation_controller.gd" id="1_x08u5"]
 [ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="2_j2gu2"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61u7c"]
-radius = 5.34
-height = 197.34
 
 [sub_resource type="Animation" id="Animation_ocfcx"]
 resource_name = "Click"
@@ -136,14 +132,6 @@ y_sort_enabled = true
 position = Vector2(3, -3.04999)
 texture = ExtResource("1_toibe")
 offset = Vector2(0, -53.45)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1, -2.04999)
-rotation = 1.56887
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-12.9942, -3.025)
-shape = SubResource("CapsuleShape2D_61u7c")
 
 [node name="Clickable" parent="." instance=ExtResource("2_j2gu2")]
 position = Vector2(5, -57)

@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://h4cbmw25b7lk"]
+[gd_scene load_steps=13 format=3 uid="uid://h4cbmw25b7lk"]
 
 [ext_resource type="PackedScene" uid="uid://biwreh4pxnlfm" path="res://Scenes/cosy_village_clicking_example.tscn" id="1_nj506"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="2_6goce"]
 [ext_resource type="Texture2D" uid="uid://43hepdy30pga" path="res://art/world/Carrots3.png" id="2_t4b8k"]
 [ext_resource type="Texture2D" uid="uid://xn8o2542ve0v" path="res://art/world/flower_patches.PNG" id="3_80nj5"]
 [ext_resource type="Texture2D" uid="uid://d1nk471pmgm6u" path="res://art/world/foreground_trees.PNG" id="4_b72nb"]
+[ext_resource type="Texture2D" uid="uid://dlhnggew571lb" path="res://art/world/houses/house_04.PNG" id="5_vvo4p"]
+[ext_resource type="PackedScene" uid="uid://702f3n8od2c0" path="res://Scenes/World/house_red.tscn" id="6_82eex"]
+[ext_resource type="PackedScene" uid="uid://bvi118sov2jxo" path="res://Scenes/World/house_yellow.tscn" id="7_qiey3"]
+[ext_resource type="Texture2D" uid="uid://b5pqfbbkvwfal" path="res://art/world/houses/house_06.PNG" id="8_vslrf"]
+[ext_resource type="Texture2D" uid="uid://bo8grmn5q7i7n" path="res://art/world/houses/house_05.PNG" id="9_3exgk"]
+[ext_resource type="Texture2D" uid="uid://ct8crf81337np" path="res://art/world/houses/house_03.PNG" id="10_byx4c"]
+[ext_resource type="Texture2D" uid="uid://dsl7paehdk7w3" path="res://art/world/houses/fance.PNG" id="12_eyg1b"]
 
 [node name="Village" type="Node2D"]
 
@@ -48,36 +55,92 @@ position = Vector2(1405, 558)
 
 [node name="House_Red" parent="CosyVillage/YSORT" index="10"]
 modulate = Color(1, 1, 1, 1)
+script = null
 
 [node name="House_Red2" parent="CosyVillage/YSORT" index="11"]
-position = Vector2(949, 659)
+position = Vector2(786, 481)
 rotation = 0.0
+script = null
 
-[node name="House_Red3" parent="CosyVillage/YSORT" index="12"]
+[node name="Sprite" parent="CosyVillage/YSORT/House_Red2" index="0"]
+visible = false
+texture = ExtResource("5_vvo4p")
+
+[node name="House_Red4" parent="CosyVillage/YSORT" index="12" instance=ExtResource("6_82eex")]
+position = Vector2(786, 481)
+script = null
+
+[node name="Sprite" parent="CosyVillage/YSORT/House_Red4" index="0"]
+texture = ExtResource("5_vvo4p")
+
+[node name="House_Red5" parent="CosyVillage/YSORT" index="13" instance=ExtResource("6_82eex")]
+position = Vector2(786, 481)
+script = null
+
+[node name="Sprite" parent="CosyVillage/YSORT/House_Red5" index="0"]
+position = Vector2(-405, 200)
+texture = ExtResource("5_vvo4p")
+
+[node name="House_Red3" parent="CosyVillage/YSORT" index="14"]
 position = Vector2(547, 650)
 rotation = 0.0
+script = null
 
-[node name="House_Yellow" parent="CosyVillage/YSORT" index="13"]
+[node name="House_Yellow" parent="CosyVillage/YSORT" index="15"]
 modulate = Color(1, 1, 1, 1)
 rotation = 0.0
+script = null
 
-[node name="FireTree7" parent="CosyVillage/YSORT" index="21" instance=ExtResource("2_6goce")]
+[node name="House_Yellow5" parent="CosyVillage/YSORT" index="16" instance=ExtResource("7_qiey3")]
+position = Vector2(825, 624)
+script = null
+
+[node name="House_Yellow2" parent="CosyVillage/YSORT" index="17"]
+script = null
+
+[node name="Sprite" parent="CosyVillage/YSORT/House_Yellow2" index="0"]
+position = Vector2(92.7675, -5.23124)
+scale = Vector2(0.900562, 0.863218)
+texture = ExtResource("8_vslrf")
+
+[node name="House_Yellow3" parent="CosyVillage/YSORT" index="18"]
+script = null
+
+[node name="Sprite" parent="CosyVillage/YSORT/House_Yellow3" index="0"]
+texture = ExtResource("9_3exgk")
+
+[node name="House_Yellow4" parent="CosyVillage/YSORT" index="19" instance=ExtResource("7_qiey3")]
+position = Vector2(439, 432)
+script = null
+
+[node name="Sprite" parent="CosyVillage/YSORT/House_Yellow4" index="0"]
+position = Vector2(104, -36)
+texture = ExtResource("10_byx4c")
+
+[node name="FireTree7" parent="CosyVillage/YSORT" index="25" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(1223, 919)
 
-[node name="FireTree8" parent="CosyVillage/YSORT" index="22" instance=ExtResource("2_6goce")]
+[node name="FireTree8" parent="CosyVillage/YSORT" index="26" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(1144, 690)
 
-[node name="FireTree9" parent="CosyVillage/YSORT" index="23" instance=ExtResource("2_6goce")]
+[node name="FireTree9" parent="CosyVillage/YSORT" index="27" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(130, 486)
 
-[node name="FireTree10" parent="CosyVillage/YSORT" index="24" instance=ExtResource("2_6goce")]
+[node name="FireTree10" parent="CosyVillage/YSORT" index="28" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(1307, 978)
 
-[node name="ScaryKraken" parent="CosyVillage/YSORT" index="27"]
-position = Vector2(74, -15)
+[node name="Fance" type="Sprite2D" parent="CosyVillage/YSORT" index="32"]
+position = Vector2(1266, 473)
+texture = ExtResource("12_eyg1b")
 
 [editable path="CosyVillage"]
+[editable path="CosyVillage/YSORT/House_Red2"]
+[editable path="CosyVillage/YSORT/House_Red4"]
+[editable path="CosyVillage/YSORT/House_Red5"]
+[editable path="CosyVillage/YSORT/House_Yellow2"]
+[editable path="CosyVillage/YSORT/House_Yellow3"]
+[editable path="CosyVillage/YSORT/House_Yellow4"]
