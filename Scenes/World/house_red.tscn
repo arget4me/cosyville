@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://48oj742ev8uy"]
+[gd_scene load_steps=3 format=3 uid="uid://702f3n8od2c0"]
 
 [ext_resource type="Script" path="res://Scripts/turn_in_house.gd" id="1_2twsw"]
 [ext_resource type="Texture2D" uid="uid://d06jr5jbqu0hl" path="res://art/world/Props/house_red.PNG" id="1_ilwmk"]

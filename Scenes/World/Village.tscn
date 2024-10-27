@@ -56,12 +56,10 @@ position = Vector2(1405, 558)
 
 [node name="House_Red" parent="CosyVillage/YSORT" index="10"]
 modulate = Color(1, 1, 1, 1)
-script = null
 
 [node name="House_Red2" parent="CosyVillage/YSORT" index="11"]
 position = Vector2(786, 481)
 rotation = 0.0
-script = null
 
 [node name="Sprite" parent="CosyVillage/YSORT/House_Red2" index="0"]
 visible = false
@@ -69,14 +67,12 @@ texture = ExtResource("5_vvo4p")
 
 [node name="House_Red4" parent="CosyVillage/YSORT" index="12" instance=ExtResource("6_82eex")]
 position = Vector2(786, 481)
-script = null
 
 [node name="Sprite" parent="CosyVillage/YSORT/House_Red4" index="0"]
 texture = ExtResource("5_vvo4p")
 
 [node name="House_Red5" parent="CosyVillage/YSORT" index="13" instance=ExtResource("6_82eex")]
 position = Vector2(786, 481)
-script = null
 
 [node name="Sprite" parent="CosyVillage/YSORT/House_Red5" index="0"]
 position = Vector2(-405, 200)
@@ -85,34 +81,24 @@ texture = ExtResource("5_vvo4p")
 [node name="House_Red3" parent="CosyVillage/YSORT" index="14"]
 position = Vector2(547, 650)
 rotation = 0.0
-script = null
 
 [node name="House_Yellow" parent="CosyVillage/YSORT" index="15"]
 modulate = Color(1, 1, 1, 1)
 rotation = 0.0
-script = null
 
 [node name="House_Yellow5" parent="CosyVillage/YSORT" index="16" instance=ExtResource("7_qiey3")]
 position = Vector2(825, 624)
-script = null
-
-[node name="House_Yellow2" parent="CosyVillage/YSORT" index="17"]
-script = null
 
 [node name="Sprite" parent="CosyVillage/YSORT/House_Yellow2" index="0"]
 position = Vector2(92.7675, -5.23124)
 scale = Vector2(0.900562, 0.863218)
 texture = ExtResource("8_vslrf")
 
-[node name="House_Yellow3" parent="CosyVillage/YSORT" index="18"]
-script = null
-
 [node name="Sprite" parent="CosyVillage/YSORT/House_Yellow3" index="0"]
 texture = ExtResource("9_3exgk")
 
 [node name="House_Yellow4" parent="CosyVillage/YSORT" index="19" instance=ExtResource("7_qiey3")]
 position = Vector2(439, 432)
-script = null
 
 [node name="Sprite" parent="CosyVillage/YSORT/House_Yellow4" index="0"]
 position = Vector2(104, -36)

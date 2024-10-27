@@ -71,9 +71,10 @@ func _physics_process(delta):
 			speed += speed_increase
 	
 func kill_villager():
+	if is_dead:
+		return
 	is_dead = true
 	anim.play("Death")
-	
 	death.emit()
 	
 	var timer := Timer.new()
