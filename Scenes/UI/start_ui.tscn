@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdhaio15xpnqq"]
+[gd_scene load_steps=4 format=3 uid="uid://cdhaio15xpnqq"]
 
 [ext_resource type="PackedScene" path="res://Scenes/UI/goto_state_button.tscn" id="1_kiwh3"]
 [ext_resource type="Theme" uid="uid://wvo4711uwpjg" path="res://Themes/UI/Score_Theme.tres" id="2_kof4l"]
+[ext_resource type="Texture2D" uid="uid://b56ar24cwrrtb" path="res://art/world/background_.PNG" id="3_en7lc"]
 
 [node name="StartUi" type="Control"]
 layout_mode = 3
@@ -31,7 +32,17 @@ offset_top = 128.0
 offset_right = 1828.0
 offset_bottom = 922.0
 theme = ExtResource("2_kof4l")
-text = "Keep 'em alive"
+text = "Welcome to CosyVille, 
+Start playing to meet your villagers
+and try to keep 'em alive, you're all
+they got !
+"
 autowrap_mode = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1091, 457)
+scale = Vector2(1.15417, 1.29444)
+texture = ExtResource("3_en7lc")
 
 [connection signal="pressed" from="QuitButton" to="GotoStateButton" method="_on_goto_state_button_2_pressed"]
