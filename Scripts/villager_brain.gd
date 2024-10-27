@@ -4,7 +4,10 @@ extends Node
 @onready var score_animation = preload("res://Scenes/UI/score_animation.tscn")
 var is_doing_action = false
 var curr_plan = []
-var last_action
+var prev_action = ""
+var current_action = ""
+signal on_new_action_started(action_name: String)
+
 var timeout_timer
 
 var prev_position
@@ -132,4 +135,11 @@ func _process(delta: float) -> void:
 		if(villager.global_position.distance_to(prev_position) < 10.0):
 			plan_failed = true
 		prev_position = villager.global_position
+	
+	if(curr_plan.size()>0):
+		current_action = curr_plan[curr_plan.size()-1]
+		if(current_action != prev_action):
+			on_new_action_started.emit(current_action)
+			prev_action = current_action
+		
 	
