@@ -122,7 +122,7 @@ func add_score(score: int):
 func _process(delta: float) -> void:
 	if(curr_plan.size()<=0 && !is_doing_action):
 		plan_failed = false
-		var action_random = randf_range(0, 0.6)
+		var action_random = randf_range(0, 0.7)
 		if(action_random <= 0.5):
 			# chop wood
 			curr_plan = GoapManager.request_plan("do_hand_in_wood", [])
