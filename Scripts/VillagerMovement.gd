@@ -32,6 +32,9 @@ func action_do_move(destination: Vector2):
 		var direction = (destination - position).normalized()
 		velocity = direction * speed
 		is_on_dest = false
+	
+	if(is_on_dest):
+		goto_pos = Vector2(-1,-1)
 
 func set_destination(position: Vector2):
 	goto_pos = position
