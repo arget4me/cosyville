@@ -113,6 +113,11 @@ func add_score(score: int):
 	new_animation.position = villager.position
 	add_child(new_animation)
 	
+	var random_death_chance = randf_range(0, 100)
+	if(random_death_chance < 5):
+		print("Random death of villager!")
+		villager.kill_villager()
+	
 func _process(delta: float) -> void:
 	if(curr_plan.size()<=0 && !is_doing_action):
 		plan_failed = false
