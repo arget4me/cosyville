@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bw43frq2eh6mp"]
+[gd_scene load_steps=18 format=3 uid="uid://b8rkyddqxw8r2"]
 
 [ext_resource type="Script" path="res://Scripts/kraken.gd" id="1_g4bcs"]
 [ext_resource type="Texture2D" uid="uid://1fn287nrbdph" path="res://art/People/loch_ness.png" id="2_6p502"]
@@ -9,6 +9,24 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fpphw"]
 radius = 11.6923
 height = 43.0769
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4msk"]
+radius = 44.1022
+
+[sub_resource type="Animation" id="Animation_xcosq"]
+resource_name = "Angry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Kraken/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_vg5ll")]
+}
 
 [sub_resource type="Animation" id="Animation_o2n6d"]
 resource_name = "Friendly"
@@ -38,21 +56,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("2_6p502")]
-}
-
-[sub_resource type="Animation" id="Animation_xcosq"]
-resource_name = "Angry"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Kraken/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_vg5ll")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tar8v"]
@@ -120,8 +123,8 @@ pointer_state = 2
 [node name="Collision2D" type="CollisionPolygon2D" parent="Kraken/Clickable"]
 polygon = PackedVector2Array(-106, -44, -99, -55, -87, -57, -79, -48, -59, -34, -47, -9, 7, -19, 25, -15, 89, -22, 96, -13, 100, 14, 102, 44, 85, 57, -85, 53, -105, 37, -94, 17, -77, 3, -96, -24, -114, -27, -124, -40, -117, -45)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kraken"]
-polygon = PackedVector2Array(-106, -44, -99, -55, -87, -57, -79, -48, -59, -34, -47, -9, 7, -19, 25, -15, 89, -22, 96, -13, 100, 14, 102, 44, 85, 57, -85, 53, -105, 37, -94, 17, -77, 3, -96, -24, -114, -27, -124, -40, -117, -45)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kraken"]
+shape = SubResource("CircleShape2D_l4msk")
 
 [node name="KrakenWaypoints" type="Node2D" parent="."]
 
