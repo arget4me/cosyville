@@ -12,6 +12,8 @@ func _process(delta):
 
 func _on_villager_death():
 	number_of_villagers -= 1
+	if(number_of_villagers <= 0):
+		GameManager.transition_to_state(GameManager.game_state.GAME_OVER)
 	
 func _on_villager_spawned():
 	number_of_villagers += 1
