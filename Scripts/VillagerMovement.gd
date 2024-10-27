@@ -6,10 +6,14 @@ var destination: Vector2
 var goto_pos: Vector2 = Vector2(-1,-1)
 var is_on_dest = false
 
+@onready var anim = $AnimationPlayer
+
+
 signal death
 
 func _ready() -> void:
 	InputMap.load_from_project_settings()
+	anim.play("Walk")
 
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -50,3 +54,19 @@ func _physics_process(delta):
 func kill_villager():
 	death.emit()
 	queue_free()
+
+
+func _on_villager_brain_on_new_action_started(action_name: String) -> void:
+	match(action_name):
+		"GO_TO_POS":
+			anim.play("Walk")
+		"DO_ACTION":
+			anim.play("Chop_Wood")
+		"DO_FISHING":
+			anim.play("Do_Fishing")
+		"DO_HAND_IN_FISH":
+			anim.play("Walk_Fish")
+		"DO_HAND_IN_WOOD":
+			anim.play("Walk_Wood")
+	
+	
