@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://h4cbmw25b7lk"]
+[gd_scene load_steps=4 format=3 uid="uid://h4cbmw25b7lk"]
 
 [ext_resource type="PackedScene" uid="uid://biwreh4pxnlfm" path="res://Scenes/cosy_village_clicking_example.tscn" id="1_nj506"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="2_6goce"]
+[ext_resource type="Texture2D" uid="uid://ywou3ggftvg1" path="res://art/world/carrots.png" id="2_044d6"]
 
 [node name="Village" type="Node2D"]
 
 [node name="CosyVillage" parent="." instance=ExtResource("1_nj506")]
+
+[node name="Carrots" type="Sprite2D" parent="CosyVillage/Camera2D/Art" index="3"]
+texture = ExtResource("2_044d6")
 
 [node name="FireTree" parent="CosyVillage/YSORT" index="0"]
 position = Vector2(672, 962)
