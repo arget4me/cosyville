@@ -6,46 +6,57 @@ var curr_plan = []
 var last_action
 var timeout_timer
 
+var prev_position
+var check_stuck_time = 5
+var stuck_time_counter = 0
+var plan_failed = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	prev_position = villager.global_position
 	pass 
 
 func action_move_to():
 	is_doing_action = true
+	var plan_index = curr_plan.size() - 1
+
 	var exit = false
 	var dest = ActionPointsManager.get_random_action_point_position()
 	villager.set_destination(dest)
 	
-	while(!exit):
+	while(!exit && !plan_failed):
 		await get_tree().create_timer(0.2).timeout
 		if(villager.is_on_dest):
 			exit = true
-
-	# add score for the action we completed
-	ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[0]])
-	curr_plan.remove_at(0)
+	if(!plan_failed):
+		# add score for the action we completed
+		ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
+	curr_plan.remove_at(plan_index)
 	is_doing_action = false
 	
 func action_chop_wood():
 	is_doing_action = true
-	
-	await get_tree().create_timer(2).timeout
-	
-	ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[0]])
-	curr_plan.remove_at(0)
+	var plan_index = curr_plan.size() - 1
+	if(!plan_failed):
+		await get_tree().create_timer(2).timeout
+	if(!plan_failed):
+		ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
+	curr_plan.remove_at(plan_index)
 	is_doing_action = false
 	
 func action_fish():
 	is_doing_action = true
-	
-	await get_tree().create_timer(3).timeout
-	
-	ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[0]])
-	curr_plan.remove_at(0)
+	var plan_index = curr_plan.size() - 1
+	if(!plan_failed):
+		await get_tree().create_timer(3).timeout
+	if(!plan_failed):
+		ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
+	curr_plan.remove_at(plan_index)
 	is_doing_action = false
 
 func do_some_action():
-	var action = curr_plan[0]
+	var plan_index = curr_plan.size() - 1
+	var action = curr_plan[plan_index]
 	match(action):
 		"DO_ACTION":
 			action_chop_wood()
@@ -57,6 +68,7 @@ func do_some_action():
 
 func _process(delta: float) -> void:
 	if(curr_plan.size()<=0 && !is_doing_action):
+		plan_failed = false
 		var action_random = randf_range(0, 0.5)
 		if(action_random <= 0.5):
 			# chop wood
@@ -65,4 +77,11 @@ func _process(delta: float) -> void:
 			curr_plan = GoapManager.request_plan("do_fishing", [])
 	if(!is_doing_action && curr_plan.size() > 0):
 		do_some_action()
+	
+	stuck_time_counter += delta
+	if(stuck_time_counter > check_stuck_time):
+		stuck_time_counter = 0
+		if(villager.global_position.distance_to(prev_position) < 10.0):
+			plan_failed = true
+		prev_position = villager.global_position
 	

@@ -37,12 +37,11 @@ func set_destination(position: Vector2):
 	goto_pos = position
 
 func _physics_process(delta):
-	get_input()
+	#get_input()
 
 	if(goto_pos == Vector2(-1,-1)):
 		return
 	action_do_move(goto_pos)
-	print(velocity)
 	move_and_slide()
 	
 func kill_villager():

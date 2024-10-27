@@ -62,8 +62,7 @@ func request_plan(goal, world_state: Array) -> Array:
 	var planned_path = astar.get_id_path(action_name_to_index[goal_action], action_name_to_index[start_action])
 	var actions_plan = []
 	for id in planned_path:
-		var index = 0
 		for key in actions:
-			if(index == id):
+			if(action_name_to_index[key] == id):
 				actions_plan.append(key)
 	return actions_plan
