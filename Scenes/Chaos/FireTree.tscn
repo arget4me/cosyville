@@ -34,8 +34,8 @@ trigger_probability = 0.02
 cooldown_time = 30.0
 
 [node name="DamageArea" parent="." instance=ExtResource("5_tyk5l")]
-position = Vector2(2, -31)
-scale = Vector2(4, 9.639)
+position = Vector2(2, -42)
+scale = Vector2(1.96, 5.799)
 
 [node name="FireNode" type="Node2D" parent="."]
 visible = false
