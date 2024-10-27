@@ -1,11 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvwh76w475sjf"]
+[gd_scene load_steps=6 format=3 uid="uid://cvsrfsh24rjsw"]
 
 [ext_resource type="Script" path="res://Scripts/kraken.gd" id="1_g4bcs"]
-[ext_resource type="Texture2D" uid="uid://dqae846wad4lk" path="res://art/square.png" id="2_6w8fa"]
-[ext_resource type="PackedScene" uid="uid://dymkfwg58tqik" path="res://Scenes/Chaos/damage_area.tscn" id="3_bp8m0"]
-[ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="4_x7cd4"]
+[ext_resource type="Texture2D" uid="uid://1fn287nrbdph" path="res://art/People/loch_ness.png" id="2_6p502"]
+[ext_resource type="Script" path="res://Scripts/Chaos/damage_area.gd" id="3_sgfi4"]
+[ext_resource type="Script" path="res://Scripts/Clicking/clickable.gd" id="4_h4q2e"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fn5k1"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fpphw"]
+radius = 11.6923
+height = 43.0769
 
 [node name="ScaryKraken" type="Node2D"]
 
@@ -17,17 +19,31 @@ script = ExtResource("1_g4bcs")
 waypoint_nodes = [NodePath("../KrakenWaypoints/waypoint1"), NodePath("../KrakenWaypoints/waypoint2"), NodePath("../KrakenWaypoints/waypoint3"), NodePath("../KrakenWaypoints/waypoint4"), NodePath("../KrakenWaypoints/waypoint5"), NodePath("../KrakenWaypoints/waypoint6"), NodePath("../KrakenWaypoints/waypoint7"), NodePath("../KrakenWaypoints/waypoint8"), NodePath("../KrakenWaypoints/waypoint9"), NodePath("../KrakenWaypoints/startpoint")]
 
 [node name="Sprite2D" type="Sprite2D" parent="Kraken"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_6w8fa")
+position = Vector2(-596, -127)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_6p502")
 
-[node name="DamageArea" parent="Kraken" instance=ExtResource("3_bp8m0")]
+[node name="DamageArea" type="Area2D" parent="Kraken"]
 scale = Vector2(6.5, 6.5)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_sgfi4")
 damage_area_active = true
 
-[node name="Clickable" parent="Kraken" instance=ExtResource("4_x7cd4")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kraken/DamageArea"]
+position = Vector2(-1.53846, 0.153846)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fpphw")
+debug_color = Color(0.996388, 0, 0.187683, 0.42)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kraken"]
-shape = SubResource("CircleShape2D_fn5k1")
+[node name="Clickable" type="Area2D" parent="Kraken"]
+script = ExtResource("4_h4q2e")
+
+[node name="Collision2D" type="CollisionPolygon2D" parent="Kraken/Clickable"]
+polygon = PackedVector2Array(-106, -44, -99, -55, -87, -57, -79, -48, -59, -34, -47, -9, 7, -19, 25, -15, 89, -22, 96, -13, 100, 14, 102, 44, 85, 57, -85, 53, -105, 37, -94, 17, -77, 3, -96, -24, -114, -27, -124, -40, -117, -45)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kraken"]
+polygon = PackedVector2Array(-106, -44, -99, -55, -87, -57, -79, -48, -59, -34, -47, -9, 7, -19, 25, -15, 89, -22, 96, -13, 100, 14, 102, 44, 85, 57, -85, 53, -105, 37, -94, 17, -77, 3, -96, -24, -114, -27, -124, -40, -117, -45)
 
 [node name="KrakenWaypoints" type="Node2D" parent="."]
 
@@ -61,4 +77,8 @@ position = Vector2(1272, 733)
 [node name="waypoint9" type="Node2D" parent="KrakenWaypoints"]
 position = Vector2(1404, 858)
 
+[connection signal="body_entered" from="Kraken/DamageArea" to="Kraken/DamageArea" method="_on_body_entered"]
+[connection signal="input_event" from="Kraken/Clickable" to="Kraken/Clickable" method="_on_input_event"]
+[connection signal="mouse_entered" from="Kraken/Clickable" to="Kraken/Clickable" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Kraken/Clickable" to="Kraken/Clickable" method="_on_mouse_exited"]
 [connection signal="on_clicked" from="Kraken/Clickable" to="Kraken" method="_on_clickable_on_clicked"]
