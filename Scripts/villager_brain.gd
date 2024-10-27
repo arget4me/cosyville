@@ -1,6 +1,7 @@
 extends Node
 
 @export var villager: VillagerClass
+@onready var score_animation = preload("res://Scenes/UI/score_animation.tscn")
 var is_doing_action = false
 var curr_plan = []
 var last_action
@@ -30,7 +31,7 @@ func action_move_to():
 			exit = true
 	if(!plan_failed):
 		# add score for the action we completed
-		ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
+		add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
 	curr_plan.remove_at(plan_index)
 	is_doing_action = false
 	
@@ -40,7 +41,7 @@ func action_chop_wood():
 	if(!plan_failed):
 		await get_tree().create_timer(2).timeout
 	if(!plan_failed):
-		ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
+		add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
 	curr_plan.remove_at(plan_index)
 	is_doing_action = false
 	
@@ -50,7 +51,7 @@ func action_fish():
 	if(!plan_failed):
 		await get_tree().create_timer(3).timeout
 	if(!plan_failed):
-		ClickingManager.add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
+		add_score(GoapManager.action_name_to_score[curr_plan[plan_index]])
 	curr_plan.remove_at(plan_index)
 	is_doing_action = false
 
@@ -65,6 +66,12 @@ func do_some_action():
 		"GO_TO_POS":
 			action_move_to()
 
+func add_score(score: int):
+	ClickingManager.add_score(score)
+	var new_animation = score_animation.instantiate()
+	new_animation.position = villager.position
+	add_child(new_animation)
+	
 
 func _process(delta: float) -> void:
 	if(curr_plan.size()<=0 && !is_doing_action):
