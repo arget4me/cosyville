@@ -8,14 +8,20 @@ func _ready() -> void:
 	actions["GO_TO_POS"] = goap_action.new(["at_pos"],[])
 	actions["DO_ACTION"] = goap_action.new(["do_action"],["at_pos"])
 	actions["DO_FISHING"] = goap_action.new(["do_fishing"],["at_pos"])
-	
+	actions["DO_HAND_IN_FISH"] = goap_action.new(["do_hand_in_fish"],["do_fishing"])
+	actions["DO_HAND_IN_WOOD"] = goap_action.new(["do_hand_in_wood"],["do_action"])
+
 	action_name_to_index["GO_TO_POS"] = 0
 	action_name_to_index["DO_ACTION"] = 1
 	action_name_to_index["DO_FISHING"] = 2
+	action_name_to_index["DO_HAND_IN_FISH"] = 3
+	action_name_to_index["DO_HAND_IN_WOOD"] = 4
 	
 	action_name_to_score["GO_TO_POS"] = 3
 	action_name_to_score["DO_ACTION"] = 10
 	action_name_to_score["DO_FISHING"] = 16
+	action_name_to_score["DO_HAND_IN_FISH"] = 16
+	action_name_to_score["DO_HAND_IN_WOOD"] = 10
 
 func request_plan(goal, world_state: Array) -> Array:
 	#setup nodes for astar
