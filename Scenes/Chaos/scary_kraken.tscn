@@ -38,6 +38,7 @@ debug_color = Color(0.996388, 0, 0.187683, 0.42)
 
 [node name="Clickable" type="Area2D" parent="Kraken"]
 script = ExtResource("4_h4q2e")
+pointer_state = 2
 
 [node name="Collision2D" type="CollisionPolygon2D" parent="Kraken/Clickable"]
 polygon = PackedVector2Array(-106, -44, -99, -55, -87, -57, -79, -48, -59, -34, -47, -9, 7, -19, 25, -15, 89, -22, 96, -13, 100, 14, 102, 44, 85, 57, -85, 53, -105, 37, -94, 17, -77, 3, -96, -24, -114, -27, -124, -40, -117, -45)
