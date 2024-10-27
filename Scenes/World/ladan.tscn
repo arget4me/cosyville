@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b16bki12o36mf"]
+[gd_scene load_steps=15 format=3 uid="uid://bbbrtyfpj3bo5"]
 
 [ext_resource type="Texture2D" uid="uid://k1bomiv5xy1k" path="res://art/world/Props/ladan.PNG" id="1_toibe"]
 [ext_resource type="Script" path="res://Scripts/World/ladan_animation_controller.gd" id="1_x08u5"]
@@ -7,6 +7,34 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61u7c"]
 radius = 5.34
 height = 197.34
+
+[sub_resource type="Animation" id="Animation_ocfcx"]
+resource_name = "Click"
+length = 0.54
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteAnimPivot:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.233333, 0.4, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.135, 0.935), Vector2(0.935, 1.138), Vector2(1.135, 0.935), Vector2(0.935, 1.138), Vector2(1.135, 0.935)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteAnimPivot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0750492, -0.0750492, 0.0]
+}
 
 [sub_resource type="Animation" id="Animation_g0ftq"]
 resource_name = "Idle"
@@ -62,34 +90,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ocfcx"]
-resource_name = "Click"
-length = 0.54
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAnimPivot:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.233333, 0.4, 0.533333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1.135, 0.935), Vector2(0.935, 1.138), Vector2(1.135, 0.935), Vector2(0.935, 1.138), Vector2(1.135, 0.935)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteAnimPivot:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.3, 0.533333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0750492, -0.0750492, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j6xiu"]
