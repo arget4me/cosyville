@@ -38,7 +38,7 @@ func get_input():
 
 func action_do_move(destination: Vector2):
 	is_on_dest = true
-	if global_position.distance_to(destination) > 1.0:
+	if global_position.distance_to(destination) > 5.0:
 		var direction = (destination - position).normalized()
 		velocity = direction * speed
 		is_on_dest = false
@@ -62,9 +62,11 @@ func _physics_process(delta):
 	speed_increase_counter += delta
 	if(speed_increase_counter > speed_increase_time):
 		speed_increase_counter = 0
-		var random_int = randi_range(1,20)
+		var random_int = randi_range(1,40)
 		if(random_int == 5):
 			speed = 300
+		if(random_int == 6):
+			speed = 50
 		if(speed < max_speed):
 			speed += speed_increase
 	

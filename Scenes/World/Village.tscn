@@ -9,6 +9,12 @@
 
 [node name="CosyVillage" parent="." instance=ExtResource("1_nj506")]
 
+[node name="CollisionPolygon2D" parent="CosyVillage/Camera2D/Art/Background/StaticBody2D" index="0"]
+polygon = PackedVector2Array(-1000, -238, -1027, -611, 43, -665, 1143, -601, 1062, -420, 985, -473, 907, -479, 802, -460, 718, -454, 646, -457, 573, -453, 524, -415, 487, -352, 433, -315, 342, -261, 285, -248, 208, -251, 73, -258, -18, -261, -115, -235, -240, -231, -300, -261, -421, -261, -559, -248, -704, -265, -869, -235)
+
+[node name="CollisionPolygon2D2" parent="CosyVillage/Camera2D/Art/Background/StaticBody2D2" index="0"]
+polygon = PackedVector2Array(-1060, -275, -811, -265, -946, -184, -939, -2, -933, 290, -904, 433, -805, 462, -704, 482, -579, 492, -462, 495, -341, 492, -196, 509, -88, 519, 6, 519, 130, 519, 218, 509, 322, 479, 396, 448, 436, 398, 423, 344, 399, 314, 399, 280, 382, 231, 357, 195, 332, 179, 306, 159, 263, 153, 208, 166, 199, 138, 208, 109, 258, 85, 339, 68, 372, 39, 423, 33, 500, 29, 601, 21, 699, 38, 766, 51, 819, 77, 857, 105, 889, 108, 914, 78, 897, 11, 857, -60, 837, -134, 870, -187, 924, -248, 944, -278, 961, -379, 941, -463, 827, -477, 766, -477, 917, -551, 1281, -463, 1338, 314, 1215, 689, 445, 782, -1194, 757)
+
 [node name="Carrots" type="Sprite2D" parent="CosyVillage/Camera2D/Art" index="3"]
 texture = ExtResource("2_t4b8k")
 
@@ -66,5 +72,8 @@ position = Vector2(130, 486)
 [node name="FireTree10" parent="CosyVillage/YSORT" index="24" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(56, 981)
+
+[node name="ScaryKraken" parent="CosyVillage/YSORT" index="27"]
+position = Vector2(74, -15)
 
 [editable path="CosyVillage"]
