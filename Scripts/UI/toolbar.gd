@@ -6,3 +6,7 @@ func _on_pointer_pressed() -> void:
 
 func _on_waterbucket_pressed() -> void:
 	MouseImageManager.set_cursor(MouseImageManager.CURSOR_STATE.WATERBUCKET)
+
+
+func _on_harpoon_pressed() -> void:
+	MouseImageManager.set_cursor(MouseImageManager.CURSOR_STATE.HARPOON)

@@ -2,11 +2,13 @@ extends Node
 
 var pointer = load("res://art/cursors/PointingHand.png")
 var waterbucket = load("res://art/cursors/WaterBucket.png")
+var harpoon = load("res://art/cursors/Harpoon.png")
 
 var pointer_hover = load("res://art/cursors/PointingHand_interactable.png")
 var waterbucket_hover = load("res://art/cursors/WaterBucket_interactable.png")
+var harpoon_hover = load("res://art/cursors/Harpoon_interactable.png")
 
-enum CURSOR_STATE{POINTER, WATERBUCKET}
+enum CURSOR_STATE{POINTER, WATERBUCKET, HARPOON}
 var state_stack = []
 var current_state = CURSOR_STATE.POINTER
 
@@ -37,3 +39,6 @@ func set_interactable(value : bool):
 		Input.set_custom_mouse_cursor(pointer_hover if interactable else pointer)
 	if current_state == CURSOR_STATE.WATERBUCKET:
 		Input.set_custom_mouse_cursor(waterbucket_hover if interactable else waterbucket)
+	if current_state == CURSOR_STATE.HARPOON:
+		print("switched to harpoon")
+		Input.set_custom_mouse_cursor(harpoon_hover if interactable else harpoon)
