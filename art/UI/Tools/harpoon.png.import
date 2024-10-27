@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxowcfe1fvgyh"
-path="res://.godot/imported/People_SpriteSheet.PNG-5d4508074d76c03252dca89e65d7c1ed.ctex"
+uid="uid://dvkgg45nhnpke"
+path="res://.godot/imported/harpoon.png-d570dc30480edd6dfa910eccc066c409.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/People/People_SpriteSheet.PNG"
-dest_files=["res://.godot/imported/People_SpriteSheet.PNG-5d4508074d76c03252dca89e65d7c1ed.ctex"]
+source_file="res://art/UI/Tools/harpoon.png"
+dest_files=["res://.godot/imported/harpoon.png-d570dc30480edd6dfa910eccc066c409.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
