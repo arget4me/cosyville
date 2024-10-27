@@ -7,34 +7,55 @@
 
 [node name="CosyVillage" parent="." instance=ExtResource("1_nj506")]
 
-[node name="FireTree" parent="CosyVillage/YSORT" index="21"]
+[node name="FireTree" parent="CosyVillage/YSORT" index="0"]
 position = Vector2(672, 962)
 
-[node name="FireTree2" parent="CosyVillage/YSORT" index="22"]
+[node name="FireTree2" parent="CosyVillage/YSORT" index="1"]
 position = Vector2(917, 991)
 
-[node name="FireTree3" parent="CosyVillage/YSORT" index="23"]
+[node name="FireTree3" parent="CosyVillage/YSORT" index="2"]
 position = Vector2(975, 867)
 
-[node name="FireTree4" parent="CosyVillage/YSORT" index="24"]
+[node name="FireTree4" parent="CosyVillage/YSORT" index="3"]
 position = Vector2(1037, 980)
 
-[node name="FireTree6" parent="CosyVillage/YSORT" index="26"]
+[node name="FireTree6" parent="CosyVillage/YSORT" index="5"]
 position = Vector2(1146, 933)
 
-[node name="FireTree7" parent="CosyVillage/YSORT" index="27" instance=ExtResource("2_6goce")]
+[node name="FishingSpot" parent="CosyVillage/YSORT" index="6"]
+position = Vector2(1263, 609)
+
+[node name="FishingSpot3" parent="CosyVillage/YSORT" index="8"]
+position = Vector2(1405, 558)
+
+[node name="House_Red" parent="CosyVillage/YSORT" index="10"]
+modulate = Color(1, 1, 1, 1)
+
+[node name="House_Red2" parent="CosyVillage/YSORT" index="11"]
+position = Vector2(949, 659)
+rotation = -0.0929171
+
+[node name="House_Red3" parent="CosyVillage/YSORT" index="12"]
+position = Vector2(547, 650)
+rotation = -0.125418
+
+[node name="House_Yellow" parent="CosyVillage/YSORT" index="13"]
+modulate = Color(1, 1, 1, 1)
+rotation = 0.0
+
+[node name="FireTree7" parent="CosyVillage/YSORT" index="21" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(1223, 919)
 
-[node name="FireTree8" parent="CosyVillage/YSORT" index="28" instance=ExtResource("2_6goce")]
+[node name="FireTree8" parent="CosyVillage/YSORT" index="22" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(1144, 690)
 
-[node name="FireTree9" parent="CosyVillage/YSORT" index="29" instance=ExtResource("2_6goce")]
+[node name="FireTree9" parent="CosyVillage/YSORT" index="23" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(130, 486)
 
-[node name="FireTree10" parent="CosyVillage/YSORT" index="30" instance=ExtResource("2_6goce")]
+[node name="FireTree10" parent="CosyVillage/YSORT" index="24" instance=ExtResource("2_6goce")]
 z_as_relative = false
 position = Vector2(79, 935)
 
