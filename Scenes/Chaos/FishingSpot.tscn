@@ -1,21 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvuuy2tqbgauw"]
+[gd_scene load_steps=2 format=3 uid="uid://dvuuy2tqbgauw"]
 
 [ext_resource type="Script" path="res://Scenes/Chaos/fishing_spot.gd" id="1_yns0t"]
-[ext_resource type="Texture2D" uid="uid://uujvhrk41hwo" path="res://art/fishing_rod.png" id="2_553ne"]
-[ext_resource type="PackedScene" uid="uid://cbycy8bbyocpe" path="res://Scenes/Clicking/clickable.tscn" id="3_ekl01"]
 
 [node name="FishingSpot" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_yns0t")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.08, 22.0329)
-scale = Vector2(0.12046, 0.202417)
-texture = ExtResource("2_553ne")
-offset = Vector2(0, -102.01)
-
-[node name="Clickable" parent="." instance=ExtResource("3_ekl01")]
-pointer_state = 1
-clicking_is_enabled = false
-
-[connection signal="on_clicked" from="Clickable" to="." method="_on_clickable_on_clicked"]
