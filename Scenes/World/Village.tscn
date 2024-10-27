@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://h4cbmw25b7lk"]
+[gd_scene load_steps=6 format=3 uid="uid://h4cbmw25b7lk"]
 
 [ext_resource type="PackedScene" uid="uid://biwreh4pxnlfm" path="res://Scenes/cosy_village_clicking_example.tscn" id="1_nj506"]
 [ext_resource type="PackedScene" uid="uid://74idepem82pk" path="res://Scenes/Chaos/FireTree.tscn" id="2_6goce"]
 [ext_resource type="Texture2D" uid="uid://43hepdy30pga" path="res://art/world/Carrots3.png" id="2_t4b8k"]
 [ext_resource type="Texture2D" uid="uid://xn8o2542ve0v" path="res://art/world/flower_patches.PNG" id="3_80nj5"]
+[ext_resource type="Texture2D" uid="uid://d1nk471pmgm6u" path="res://art/world/foreground_trees.PNG" id="4_b72nb"]
 
 [node name="Village" type="Node2D"]
 
@@ -21,8 +22,11 @@ texture = ExtResource("2_t4b8k")
 [node name="FlowerPatches" type="Sprite2D" parent="CosyVillage/Camera2D/Art" index="4"]
 texture = ExtResource("3_80nj5")
 
+[node name="Sprite2D" type="Sprite2D" parent="CosyVillage/Camera2D" index="1"]
+texture = ExtResource("4_b72nb")
+
 [node name="FireTree" parent="CosyVillage/YSORT" index="0"]
-position = Vector2(127, 1032)
+position = Vector2(744, 875)
 
 [node name="FireTree2" parent="CosyVillage/YSORT" index="1"]
 position = Vector2(917, 991)
@@ -71,7 +75,7 @@ position = Vector2(130, 486)
 
 [node name="FireTree10" parent="CosyVillage/YSORT" index="24" instance=ExtResource("2_6goce")]
 z_as_relative = false
-position = Vector2(56, 981)
+position = Vector2(1307, 978)
 
 [node name="ScaryKraken" parent="CosyVillage/YSORT" index="27"]
 position = Vector2(74, -15)

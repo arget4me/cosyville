@@ -16,15 +16,15 @@ fire_color = Color(1, 0.584364, 0.594435, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3, -1.00002)
-scale = Vector2(0.320001, 0.44)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_i8xu2")
 offset = Vector2(0, -102.01)
 script = ExtResource("3_as5y0")
 sprites = Array[Texture2D]([ExtResource("4_o6ar8")])
 
 [node name="Clickable" parent="." instance=ExtResource("3_qv68i")]
-position = Vector2(2, -43)
-scale = Vector2(0.668282, 1.89487)
+position = Vector2(2, -61)
+scale = Vector2(1.42828, 2.33487)
 pointer_state = 1
 clicking_is_enabled = false
 
@@ -34,8 +34,8 @@ trigger_probability = 0.02
 cooldown_time = 20.0
 
 [node name="DamageArea" parent="." instance=ExtResource("5_tyk5l")]
-position = Vector2(2, -42)
-scale = Vector2(1.96, 5.799)
+position = Vector2(2, -59)
+scale = Vector2(4.08, 6.599)
 
 [node name="FireNode" type="Node2D" parent="."]
 visible = false
