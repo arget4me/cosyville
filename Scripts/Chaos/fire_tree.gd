@@ -10,7 +10,9 @@ extends Node2D
 
 func _ready():
 	clickable.set_process(false)
-	ActionPointsManager.register_action_point(position, ActionPointsManager.action_point_type.WOOD)
+	var offset_pos = position
+	offset_pos.y += 5
+	ActionPointsManager.register_action_point(offset_pos, ActionPointsManager.action_point_type.WOOD)
 	fire_node.visible = false
 
 func _on_node_trigger_chaos() -> void:
