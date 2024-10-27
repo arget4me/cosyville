@@ -2,7 +2,7 @@ extends Node
 
 @export var trigger_probability: float = 1
 @export var cooldown_time : float = 4.0
-@onready var random = RandomNumberGenerator.new()
+var random
 var is_active: bool = false
 signal trigger_chaos
 
@@ -11,6 +11,8 @@ var cooldown := true
 var timer : Timer
 
 func _ready():
+	random = RandomNumberGenerator.new()
+	random.set_seed(get_parent().global_position.x * 1841154 - get_parent().global_position.y * 78178 + get_parent().global_position.x * get_parent().global_position.y)
 	timer = Timer.new()
 	timer.wait_time = cooldown_time
 	timer.one_shot = true

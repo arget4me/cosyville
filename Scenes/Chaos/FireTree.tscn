@@ -31,7 +31,7 @@ clicking_is_enabled = false
 [node name="ChaosTriggerable" type="Node" parent="."]
 script = ExtResource("4_iih2h")
 trigger_probability = 0.02
-cooldown_time = 30.0
+cooldown_time = 20.0
 
 [node name="DamageArea" parent="." instance=ExtResource("5_tyk5l")]
 position = Vector2(2, -42)
