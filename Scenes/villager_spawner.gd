@@ -3,7 +3,7 @@ extends Node2D
 @onready var villager_scene = preload("res://Scenes/villager_instance.tscn")
 signal villager_spawned
 
-var spawn_more_at = 1000
+var spawn_more_at = 500
 var prev_thousands = 0 
 var is_spawning = false
 
