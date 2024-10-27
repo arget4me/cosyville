@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdevdb2f0xlsc"]
 
 [ext_resource type="Script" path="res://Scripts/World/cloud_scroll.gd" id="1_6sbea"]
-[ext_resource type="Texture2D" uid="uid://2uey7st154pb" path="res://art/world/Cloud.png" id="2_n68rd"]
+[ext_resource type="Texture2D" uid="uid://hfglfncp1x70" path="res://art/world/clouds.PNG" id="2_aew3a"]
 
 [node name="Clouds" type="Node2D"]
 
@@ -11,25 +11,10 @@ script = ExtResource("1_6sbea")
 speed = 50.0
 length = 2161.0
 
-[node name="Cloud" type="Sprite2D" parent="Cloud scroll"]
-position = Vector2(-1130, -468)
-scale = Vector2(1.64, 0.68)
-texture = ExtResource("2_n68rd")
-
 [node name="Cloud2" type="Sprite2D" parent="Cloud scroll"]
-position = Vector2(-1615, -472)
+position = Vector2(-482, 3)
 scale = Vector2(1.24, 0.97319)
-texture = ExtResource("2_n68rd")
-
-[node name="Cloud3" type="Sprite2D" parent="Cloud scroll"]
-position = Vector2(-448, -405)
-scale = Vector2(1.59561, 0.387864)
-texture = ExtResource("2_n68rd")
-
-[node name="Cloud4" type="Sprite2D" parent="Cloud scroll"]
-position = Vector2(137, -476)
-scale = Vector2(0.515608, 0.410906)
-texture = ExtResource("2_n68rd")
+texture = ExtResource("2_aew3a")
 
 [node name="Cloud scroll_2" type="Node2D" parent="."]
 position = Vector2(-1915, 0)
@@ -37,22 +22,7 @@ script = ExtResource("1_6sbea")
 speed = 50.0
 length = 2161.0
 
-[node name="Cloud" type="Sprite2D" parent="Cloud scroll_2"]
-position = Vector2(-1130, -468)
-scale = Vector2(1.64, 0.68)
-texture = ExtResource("2_n68rd")
-
 [node name="Cloud2" type="Sprite2D" parent="Cloud scroll_2"]
-position = Vector2(-1615, -472)
+position = Vector2(-633, -18)
 scale = Vector2(1.24, 0.97319)
-texture = ExtResource("2_n68rd")
-
-[node name="Cloud3" type="Sprite2D" parent="Cloud scroll_2"]
-position = Vector2(-448, -405)
-scale = Vector2(1.59561, 0.387864)
-texture = ExtResource("2_n68rd")
-
-[node name="Cloud4" type="Sprite2D" parent="Cloud scroll_2"]
-position = Vector2(137, -476)
-scale = Vector2(0.515608, 0.410906)
-texture = ExtResource("2_n68rd")
+texture = ExtResource("2_aew3a")
