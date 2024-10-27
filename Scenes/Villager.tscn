@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpwxtgli88ysr"]
 
 [ext_resource type="Script" path="res://Scripts/VillagerMovement.gd" id="1_h8hph"]
-[ext_resource type="Texture2D" uid="uid://dqae846wad4lk" path="res://art/square.png" id="2_063rg"]
+[ext_resource type="Texture2D" uid="uid://dqae846wad4lk" path="res://art/People/VillagerMale.png" id="2_063rg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0q22o"]
 size = Vector2(222, 222)
