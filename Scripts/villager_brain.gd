@@ -22,7 +22,7 @@ func action_move_to():
 	var plan_index = curr_plan.size() - 1
 
 	var exit = false
-	var dest = ActionPointsManager.get_random_action_point_position()
+	var dest = ActionPointsManager.get_random_action_point_position(ActionPointsManager.action_point_type.WOOD)
 	villager.set_destination(dest)
 	
 	while(!exit && !plan_failed):
