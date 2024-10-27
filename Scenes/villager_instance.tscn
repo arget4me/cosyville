@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1gnafm1flod2"]
+[gd_scene load_steps=13 format=3 uid="uid://c1gnafm1flod2"]
 
 [ext_resource type="Script" path="res://Scripts/VillagerMovement.gd" id="1_m4to7"]
 [ext_resource type="Texture2D" uid="uid://cxowcfe1fvgyh" path="res://art/People/People_SpriteSheet.PNG" id="2_wkmtr"]
@@ -87,9 +87,21 @@ tracks/2/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteAnimPivot/Sprite2D:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_on68u"]
-resource_name = "Walk_Wood"
+resource_name = "Chop_Wood"
 length = 0.708
 loop_mode = 1
 tracks/0/type = "value"
@@ -129,11 +141,178 @@ tracks/2/keys = {
 "values": [0.0, -0.616101, -0.680678, 0.443314]
 }
 
+[sub_resource type="Animation" id="Animation_i8ni3"]
+resource_name = "Walk_Wood"
+length = 0.489
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteAnimPivot/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteAnimPivot:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -7.19), Vector2(0, 0), Vector2(0, -7.19)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteAnimPivot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0750492, 0.0, 0.0750492]
+}
+
+[sub_resource type="Animation" id="Animation_h4jm1"]
+resource_name = "Walk_Fish"
+length = 0.489
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteAnimPivot/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteAnimPivot:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -7.19), Vector2(0, 0), Vector2(0, -7.19)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteAnimPivot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0750492, 0.0, 0.0750492]
+}
+
+[sub_resource type="Animation" id="Animation_4257e"]
+resource_name = "Do_Fishing"
+length = 1.6515
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteAnimPivot/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteAnimPivot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.782382, 1.23333, 1.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0523599, -0.239692, 0.0698132]
+}
+
+[sub_resource type="Animation" id="Animation_07kxa"]
+resource_name = "Death"
+length = 1.202
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteAnimPivot/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteAnimPivot:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteAnimPivot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.366667, 0.466667, 0.533333, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.19206, -1.04196, 0.518363, 0.0558505, 0.258309, 0.258309]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteAnimPivot/Sprite2D:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7, 1.13333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a1kex"]
 _data = {
+"Chop_Wood": SubResource("Animation_on68u"),
+"Death": SubResource("Animation_07kxa"),
+"Do_Fishing": SubResource("Animation_4257e"),
 "RESET": SubResource("Animation_4nbdj"),
 "Walk": SubResource("Animation_wd0dk"),
-"Walk_Wood": SubResource("Animation_on68u")
+"Walk_Fish": SubResource("Animation_h4jm1"),
+"Walk_Wood": SubResource("Animation_i8ni3")
 }
 
 [node name="VillagerInstance" type="CharacterBody2D"]
@@ -147,6 +326,7 @@ position = Vector2(0, -7.19)
 rotation = -0.0750492
 
 [node name="Sprite2D" type="Sprite2D" parent="SpriteAnimPivot"]
+self_modulate = Color(1, 1, 1, 0)
 y_sort_enabled = true
 texture_filter = 5
 scale = Vector2(2, 2)
@@ -168,3 +348,5 @@ villager = NodePath("..")
 libraries = {
 "": SubResource("AnimationLibrary_a1kex")
 }
+
+[connection signal="on_new_action_started" from="VillagerBrain" to="." method="_on_villager_brain_on_new_action_started"]
