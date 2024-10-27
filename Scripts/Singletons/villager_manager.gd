@@ -13,6 +13,7 @@ func _process(delta):
 func _on_villager_death():
 	number_of_villagers -= 1
 	if(number_of_villagers <= 0):
+		await get_tree().create_timer(2).timeout
 		GameManager.transition_to_state(GameManager.game_state.GAME_OVER)
 	
 func _on_villager_spawned():
