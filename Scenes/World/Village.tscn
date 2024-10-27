@@ -22,7 +22,8 @@ texture = ExtResource("2_t4b8k")
 [node name="FlowerPatches" type="Sprite2D" parent="CosyVillage/Camera2D/Art" index="4"]
 texture = ExtResource("3_80nj5")
 
-[node name="Sprite2D" type="Sprite2D" parent="CosyVillage/Camera2D" index="1"]
+[node name="foreground_trees" type="Sprite2D" parent="CosyVillage/Camera2D" index="1"]
+z_index = 100
 texture = ExtResource("4_b72nb")
 
 [node name="FireTree" parent="CosyVillage/YSORT" index="0"]
