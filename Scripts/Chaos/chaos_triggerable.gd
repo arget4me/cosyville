@@ -39,8 +39,10 @@ func should_trigger():
 	if cooldown: # Otherwise they trigger constantly even when cleared
 		return
 	
-	var random_float = random.randfn()
-	if random_float < trigger_probability:
-		activate_chaos()
+	if ChaosManager.is_allowed_to_trigger():
+		ChaosManager.claim_trigger()
+		var random_float = random.randfn()
+		if random_float < trigger_probability:
+			activate_chaos()
 		
 	
