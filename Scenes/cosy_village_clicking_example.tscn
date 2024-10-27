@@ -79,20 +79,23 @@ position = Vector2(1331, 579)
 position = Vector2(1200, 420)
 
 [node name="House_Red" parent="YSORT" instance=ExtResource("7_af8d8")]
+modulate = Color(1, 0.973951, 0.778528, 1)
 position = Vector2(666, 412)
 
 [node name="House_Red2" parent="YSORT" instance=ExtResource("7_af8d8")]
-position = Vector2(949, 659)
-rotation = -0.0929171
+position = Vector2(927, 580)
+rotation = 0.0267989
 scale = Vector2(1.08, 1.32)
 
 [node name="House_Red3" parent="YSORT" instance=ExtResource("7_af8d8")]
-position = Vector2(547, 650)
-rotation = -0.125418
+position = Vector2(542, 643)
+rotation = 0.00237654
 scale = Vector2(1.27349, 1.3697)
 
 [node name="House_Yellow" parent="YSORT" instance=ExtResource("8_dkhfv")]
+modulate = Color(0.869596, 1, 0.853961, 1)
 position = Vector2(526, 499)
+rotation = 0.0123185
 
 [node name="House_Yellow2" parent="YSORT" instance=ExtResource("8_dkhfv")]
 position = Vector2(351, 807)
@@ -116,3 +119,9 @@ position = Vector2(44, 410)
 
 [node name="FireTree_Apples7" parent="YSORT" instance=ExtResource("9_lrgvo")]
 position = Vector2(1590, 544)
+
+[node name="FireTree_Apples8" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(1537, 143)
+
+[node name="FireTree_Apples9" parent="YSORT" instance=ExtResource("9_lrgvo")]
+position = Vector2(1847, 129)
