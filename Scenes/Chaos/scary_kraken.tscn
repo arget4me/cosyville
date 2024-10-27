@@ -1,13 +1,90 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvsrfsh24rjsw"]
+[gd_scene load_steps=17 format=3 uid="uid://bw43frq2eh6mp"]
 
 [ext_resource type="Script" path="res://Scripts/kraken.gd" id="1_g4bcs"]
 [ext_resource type="Texture2D" uid="uid://1fn287nrbdph" path="res://art/People/loch_ness.png" id="2_6p502"]
 [ext_resource type="Script" path="res://Scripts/Chaos/damage_area.gd" id="3_sgfi4"]
 [ext_resource type="Script" path="res://Scripts/Clicking/clickable.gd" id="4_h4q2e"]
+[ext_resource type="Texture2D" uid="uid://cc2vsy7xxfn01" path="res://art/People/Kraken2.png" id="5_vg5ll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fpphw"]
 radius = 11.6923
 height = 43.0769
+
+[sub_resource type="Animation" id="Animation_o2n6d"]
+resource_name = "Friendly"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Kraken/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6p502")]
+}
+
+[sub_resource type="Animation" id="Animation_x24v6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Kraken/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6p502")]
+}
+
+[sub_resource type="Animation" id="Animation_xcosq"]
+resource_name = "Angry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Kraken/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_vg5ll")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tar8v"]
+_data = {
+"Angry": SubResource("Animation_xcosq"),
+"Friendly": SubResource("Animation_o2n6d"),
+"RESET": SubResource("Animation_x24v6")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v4fel"]
+animation = &"Angry"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jalpe"]
+animation = &"Friendly"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_loegg"]
+advance_mode = 2
+advance_condition = &"angry"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4dyhc"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bcadl"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_fl1ql"]
+states/Angry/node = SubResource("AnimationNodeAnimation_v4fel")
+states/Angry/position = Vector2(563, 83)
+states/Friendly/node = SubResource("AnimationNodeAnimation_jalpe")
+states/Friendly/position = Vector2(411, 59)
+transitions = ["Friendly", "Angry", SubResource("AnimationNodeStateMachineTransition_loegg"), "Angry", "Friendly", SubResource("AnimationNodeStateMachineTransition_4dyhc"), "Start", "Friendly", SubResource("AnimationNodeStateMachineTransition_bcadl")]
 
 [node name="ScaryKraken" type="Node2D"]
 
@@ -77,6 +154,17 @@ position = Vector2(1272, 733)
 
 [node name="waypoint9" type="Node2D" parent="KrakenWaypoints"]
 position = Vector2(1404, 858)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tar8v")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_fl1ql")
+advance_expression_base_node = NodePath("../AnimationPlayer")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/angry = false
 
 [connection signal="body_entered" from="Kraken/DamageArea" to="Kraken/DamageArea" method="_on_body_entered"]
 [connection signal="input_event" from="Kraken/Clickable" to="Kraken/Clickable" method="_on_input_event"]

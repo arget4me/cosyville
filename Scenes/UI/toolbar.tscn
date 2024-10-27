@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://2c63w8v4wa7h"]
 
-[ext_resource type="Theme" path="res://Themes/UI/ToolbarTheme.tres" id="1_00n4h"]
+[ext_resource type="Theme" uid="uid://das4u2lg25k8s" path="res://Themes/UI/ToolbarTheme.tres" id="1_00n4h"]
 [ext_resource type="Script" path="res://Scripts/UI/toolbar.gd" id="2_8xlbv"]
-[ext_resource type="PackedScene" path="res://Scenes/UI/tool_bar_button.tscn" id="2_iphwk"]
+[ext_resource type="PackedScene" uid="uid://qb8g6koi43q6" path="res://Scenes/UI/tool_bar_button.tscn" id="2_iphwk"]
 [ext_resource type="Texture2D" uid="uid://s27mv41x26fs" path="res://art/cursors/PointingHand.png" id="3_eqb05"]
-[ext_resource type="Texture2D" uid="uid://dvkgg45nhnpke" path="res://art/UI/Tools/harpoon.png" id="5_rjywb"]
+[ext_resource type="Texture2D" uid="uid://dnlsg2fovdj8r" path="res://art/cursors/Harpoon.png" id="5_rjywb"]
 
 [node name="Toolbar" type="PanelContainer"]
 anchors_preset = 8

@@ -3,9 +3,13 @@ extends CharacterBody2D
 @export var speed = 60
 @export var waypoint_nodes: Array[Node2D] 
 
+@onready var animtree = $"../AnimationTree"
+
 var current_waypoint_index = 0 
+var state_machine
 
 func _ready() -> void:
+	state_machine = animtree["parameters/playback"]
 	if waypoint_nodes.size() == 0:
 		print("No waypoint nodes assigned!")
 	else:
@@ -26,5 +30,6 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_clickable_on_clicked() -> void:
-	var clamped_wp = clampi(current_waypoint_index - 2, 0, waypoint_nodes.size())
-	current_waypoint_index -= clamped_wp # back it up a bit
+	state_machine.travel("Angry")
+	var random_wp = randi_range(0, waypoint_nodes.size() - 1)
+	current_waypoint_index = random_wp

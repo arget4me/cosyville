@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqae846wad4lk"
-path="res://.godot/imported/square.png-2c16becdf289b2207539e4fb9fcb3d9f.ctex"
+uid="uid://43hepdy30pga"
+path="res://.godot/imported/Carrots3.png-8e88cd76315769a3ea52a535fd8acdbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/square.png"
-dest_files=["res://.godot/imported/square.png-2c16becdf289b2207539e4fb9fcb3d9f.ctex"]
+source_file="res://art/world/Carrots3.png"
+dest_files=["res://.godot/imported/Carrots3.png-8e88cd76315769a3ea52a535fd8acdbd.ctex"]
 
 [params]
 

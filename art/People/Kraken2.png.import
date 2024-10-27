@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvkgg45nhnpke"
-path="res://.godot/imported/harpoon.png-d570dc30480edd6dfa910eccc066c409.ctex"
+uid="uid://cc2vsy7xxfn01"
+path="res://.godot/imported/Kraken2.png-78972bf058149084ac78716feff11d6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/UI/Tools/harpoon.png"
-dest_files=["res://.godot/imported/harpoon.png-d570dc30480edd6dfa910eccc066c409.ctex"]
+source_file="res://art/People/Kraken2.png"
+dest_files=["res://.godot/imported/Kraken2.png-78972bf058149084ac78716feff11d6f.ctex"]
 
 [params]
 

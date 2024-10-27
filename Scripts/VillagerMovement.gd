@@ -15,6 +15,8 @@ var speed_increase_counter = 0
 
 signal death
 
+var is_dead = false
+
 func _ready() -> void:
 	InputMap.load_from_project_settings()
 	anim.play("Walk")
@@ -48,7 +50,9 @@ func set_destination(position: Vector2):
 	goto_pos = position
 
 func _physics_process(delta):
-	#get_input()s
+	if is_dead:
+		return
+	#get_input()
 
 	if(goto_pos == Vector2(-1,-1)):
 		return
@@ -67,11 +71,19 @@ func _physics_process(delta):
 			speed += speed_increase
 	
 func kill_villager():
+	is_dead = true
+	anim.play("Death")
+	
 	death.emit()
-	queue_free()
-
-
+	
+	var timer := Timer.new()
+	timer.one_shot = true
+	timer.wait_time = anim.current_animation_length
+	timer.timeout.connect(queue_free)
+	
 func _on_villager_brain_on_new_action_started(action_name: String) -> void:
+	if is_dead:
+		return
 	match(action_name):
 		"GO_TO_POS":
 			anim.play("Walk")
