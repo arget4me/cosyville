@@ -1,6 +1,7 @@
 extends Node
 
 var triggerables = []
+var max_concurrent_triggers = 5
 signal chaos_tick
 
 func _ready():
@@ -12,5 +13,14 @@ func _ready():
 	timer.start()
 
 func trigger_chaos():
+	max_concurrent_triggers = 3
 	chaos_tick.emit()
 	
+func claim_trigger():
+	if max_concurrent_triggers > 0:
+		max_concurrent_triggers -= 1
+	
+func is_allowed_to_trigger():
+	if max_concurrent_triggers <= 0:
+		return false
+	return true
